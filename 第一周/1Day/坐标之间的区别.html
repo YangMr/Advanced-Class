@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{height: 2000px;}
+    </style>
+</head>
+<body>
+
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+    $(function () {
+        $(document).click(function (e) {
+            console.log("可视区域的坐标:" +e.clientY + "距离当前电脑屏幕的坐标:" + e.screenY + "获取页面的坐标:" + e.pageY )
+        })
+    })
+</script>

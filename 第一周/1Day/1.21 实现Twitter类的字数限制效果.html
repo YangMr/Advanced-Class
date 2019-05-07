@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body { margin:0; padding:20px 40px; background:#fff; font:80% Arial, Helvetica, sans-serif; color:#555; line-height:180%; }
+        .clear { clear:both; }
+        /* Character Count styles */
+        form { width:500px; }
+        label { display:block; font-size:14px; }
+        textarea { width:490px; height:60px; padding:3px; color:#555; font:16px Arial, Helvetica, sans-serif; }
+        form div { position:relative; margin:1em 0; }
+        form .counter { position:absolute; right:0; top:0; font-size:20px; font-weight:bold; color:#ccc; }
+        form .warning { color:#600; background: red;}
+        form .exceeded { color:#e00; }
+
+    </style>
+</head>
+<body>
+<h2>超实用的jQuery代码段 - jQuery类Twitter文本字数限制效果</h2>
+<form id="form" method="post" action="">
+    <h2>默认风格文本框</h2>
+    <div>
+        <label for="message">请输入用户信息</label>
+        <textarea id="id-textarea-default" name="id-textarea-default">aa</textarea>
+    </div>
+    <h2>自定义风格文本框</h2>
+    <div>
+        <label for="message">请输入用户信息 (Limited to 150, Warning at 120)</label>
+        <textarea id="id-textarea-custom" name="id-textarea-custom">aaa</textarea>
+    </div>
+
+    <textarea name="" id="test" cols="30" rows="10">aaa</textarea>
+    <div id="num">hello</div>
+</form>
+
+
+
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+    $(function () {
+        var defaults = {
+            allowed: 140,
+            warning: 25,
+            css: 'counter',
+            counterElement: 'span',
+            cssWarning: 'warning',
+            cssExceeded: 'exceeded',
+            counterText: '剩余字数'
+        };
+
+        function calculate(obj){
+            //获取文本域内容的长度
+            var count = $(obj).val().length;
+            //可输入的字数
+            var available = defaults.allowed - count;
+            //如果可输入的字数小于等于 25  并且可输入的字数大于等于 0
+            if(available <= defaults.warning && available >= 0){
+                $(obj).next().addClass(defaults.cssWarning);
+                console.log("111")
+            } else {
+                $(obj).next().removeClass(defaults.cssWarning);
+            }
+            //如果可输入的文字小于0
+            if(available < 0){
+                $(obj).next().addClass(defaults.cssExceeded);
+            } else {
+                $(obj).next().removeClass(defaults.cssExceeded);
+            }
+            $(obj).next().html(defaults.counterText + available);
+        };
+
+        this.each(function() {
+            $(this).after('<'+ options.counterElement +' class="' + options.css + '">'+ options.counterText +'</'+ options.counterElement +'>');
+            calculate(this);
+            $(this).keyup(function(){calculate(this)});
+            $(this).change(function(){calculate(this)});
+        });
+
+        calculate("#test")
+    })
+</script>

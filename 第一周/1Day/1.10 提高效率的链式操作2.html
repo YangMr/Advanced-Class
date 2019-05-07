@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        #menu{width: 980px; margin: 0 auto;}
+        #menu ul{margin-top:30px;border: 1px solid #ccc; overflow: hidden;}
+        #menu ul li{float: left; cursor: pointer; border-right:1px solid #ccc; width: 120px; text-align: center; height: 35px; line-height: 35px;}
+        #menu ul li.active{background: purple; color: #fff;}
+    </style>
+</head>
+<body>
+<div id="menu">
+    <ul>
+        <li class="active">首页</li>
+        <li>个人</li>
+        <li>心情</li>
+        <li>天气</li>
+        <li>开心</li>
+    </ul>
+</div>
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+    $(function () {
+        $("#menu ul li").click(function () {
+            $(this).addClass("active").siblings().removeClass("active")
+        })
+    })
+</script>

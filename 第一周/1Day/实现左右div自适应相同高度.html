@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #left{
+            background:#999999;
+            float:left;
+            width:100px;
+        }
+        #right{
+            background:#0066FF;
+            color:#fff;
+            width:300px;
+            float:left;
+        }
+
+    </style>
+</head>
+<body>
+<div id="left">
+    <div style="padding:10px">
+        <p>左侧页面</p>
+    </div>
+</div>
+<div id="right">
+    <div style="padding:10px">
+        <p>右侧页面</p>
+        <p>右侧页面</p>
+        <p>右侧页面</p>
+        <p>右侧页面</p>
+        <p>右侧页面</p>
+        <p>右侧页面</p>
+    </div>
+</div>
+
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+    $(function () {
+        function autoHeight() {
+            if($("#left").outerHeight() >= $("#right").outerHeight()){
+                $("#right").height($("#left").outerHeight())
+            }else{
+                $("#left").height($("#right").outerHeight())
+            }
+        }
+
+        autoHeight()
+    })
+</script>

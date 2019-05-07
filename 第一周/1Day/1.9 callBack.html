@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{width: 150px; height: 150px; margin: 100px auto; border: 1px solid #ccc;}
+        #test{width: 200px; height: 200px; background: red; display: none;}
+    </style>
+</head>
+<body>
+    <button id="btn">CallBack</button>
+    <div id="box"></div>
+
+    <div id="test">hello</div>
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+    $(function () {
+        $("#btn").click(function () {
+            $("#box").hide(3000,function () {
+                $("#test").show(3000)
+            });
+        })
+    })
+</script>

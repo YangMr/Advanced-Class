@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{width: 200px; margin: 100px auto; height: 200px; background: red;}
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+    $(function () {
+        $("#box").css({width:400}).click(function () {
+            alert("111")
+        })
+    })
+</script>

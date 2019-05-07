@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        #main {
+            width:900px;
+            margin:50px auto;
+        }
+        #sidebar {
+            width:250px;
+            height:500px;
+            float:left;
+        }
+        #sidebar h2 {
+            width:248px;
+            height:30px;
+            line-height:30px;
+            font-size:14px;
+            background:#eee;
+            text-indent:10px;
+            border:1px solid #ccc;
+            border-bottom:none;
+            margin:0;
+        }
+        #sidebar ul {
+            height:150px;
+            border:1px solid #ccc;
+            margin:0 0 10px 0;
+            overflow:hidden;
+            opacity:1;
+            filter:alpha(opacity=100);
+            background:#fff;
+            font-size: 12px;
+        }
+        #sidebar ul li {
+            height:30px;
+            line-height:30px;
+            background:#eee;
+            text-indent:30px;
+        }
+        #sidebar ul li a {
+            text-decoration:none;
+            color:#333;
+        }
+        #index {
+            width:630px;
+            height:570px;
+            float:right;
+            position:relative;
+        }
+    </style>
+</head>
+<body>
+
+<div id="main">
+    <div id="sidebar">
+        <h2>教育博文1</h2>
+        <ul>
+            <li><a href="###">靠自己95 后女生被16 所国外名校录取</a></li>
+            <li><a href="###">00 后的成长烦恼：压力巨大成隐形杀手</a></li>
+            <li><a href="###">一年自学MIT 的33 门课? 疯狂学习方法</a></li>
+            <li><a href="###">申请赴美读研人数下降5% 7 年来首遇冷</a></li>
+            <li><a href="###">西政“萌招聘”秀出辣椒与美女被赞</a></li>
+        </ul>
+        <h2>教育博文2</h2>
+        <ul>
+            <li><a href="###">靠自己95 后女生被16 所国外名校录取</a></li>
+            <li><a href="###">00 后的成长烦恼：压力巨大成隐形杀手</a></li>
+            <li><a href="###">一年自学MIT 的33 门课? 疯狂学习方法</a></li>
+            <li><a href="###">申请赴美读研人数下降5% 7 年来首遇冷</a></li>
+            <li><a href="###">西政“萌招聘”秀出辣椒与美女被赞</a></li>
+        </ul>
+        <h2>教育博文3</h2>
+        <ul>
+            <li><a href="###">靠自己95 后女生被16 所国外名校录取</a></li>
+            <li><a href="###">00 后的成长烦恼：压力巨大成隐形杀手</a></li>
+            <li><a href="###">一年自学MIT 的33 门课? 疯狂学习方法</a></li>
+            <li><a href="###">申请赴美读研人数下降5% 7 年来首遇冷</a></li>
+            <li><a href="###">西政“萌招聘”秀出辣椒与美女被赞</a></li>
+        </ul>
+    </div>
+    <div id="index"></div>
+</div>
+
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+    $(function () {
+        $("h2").click(function () {
+           $(this).next().toggle(1000,function () {
+               $("h2").css("background","yellow")
+           });
+        })
+    })
+</script>
