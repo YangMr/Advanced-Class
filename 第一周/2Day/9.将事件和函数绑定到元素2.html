@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button>Click One</button>
+    <button>Click Two</button>
+    <button>Click Three</button>
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+    $(function () {
+
+        // $("button").bind(事件名 传递的参数 执行的函数)
+        $("button").on("click mouseover mouseout",{name : "jack",age : 100},function (e) {
+            console.log(e.data.name + e.data.age)
+        })
+
+      /*  $("button").click(function () {
+            alert("1")
+        })
+        $("button").click(function () {
+            alert("2")
+        })
+        $("button").click(function () {
+            alert("3")
+        })
+        $("button").mouseover(function () {
+            alert("hello")
+        })*/
+
+      /* $(window).load(function () {
+           alert("1")
+       })
+        $(window).load(function () {
+            alert("2")
+        })
+        $(window).load(function () {
+            alert("3")
+        })*/
+
+        /*window.onload = function () {
+            alert("1")
+        }
+        window.onload = function () {
+            alert("2")
+        }
+        window.onload = function () {
+            alert("3")
+        }*/
+    })
+</script>

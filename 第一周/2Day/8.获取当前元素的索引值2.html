@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        div{width: 120px; background: #eee; cursor: pointer; text-align: center; line-height: 120px; height: 120px; border: 1px solid #ccc; float: left; margin: 20px;}
+        ul{clear: both;}
+        ul li{width: 150px; height: 150px; border: 1px solid #ccc; text-align: center; line-height: 150px; background: purple; color: #fff; font-size: 14px; border-radius: 50%; margin:10px auto;}
+    </style>
+</head>
+<body>
+
+<div>我是div1</div>
+<div>我是div2</div>
+<div>我是div3</div>
+<div>我是div4</div>
+<div>我是div5</div>
+
+<ul>
+    <li>我对应的是第1个div</li>
+    <li>我对应的是第2个div</li>
+    <li>我对应的是第3个div</li>
+    <li>我对应的是第4个div</li>
+    <li>我对应的是第5个div</li>
+</ul>
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+
+    $(function () {
+        $("div").click(function () {
+           var _index = $("div").index(this);
+            console.log(_index)
+           $("ul li").eq(_index).css({background : "yellow"})
+        })
+    })
+
+</script>

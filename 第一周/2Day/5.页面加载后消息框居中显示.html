@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{height: 2000px}
+        .mask { position: fixed;  top: 0; left: 0; width: 100%; height: 100%; background: #000; opacity: 0.5; filter: alpha(opacity=50); display: none; z-index: 99; }
+        .mess { position: absolute; display: none; width: 250px; height: 100px; border: 1px solid #ccc; background: #ececec; text-align: center; z-index: 101; }
+        /*.btn{margin-top: 800px;}*/
+    </style>
+
+</head>
+<body>
+    <h2>超实用的jQuery代码段 - jQuery页面加载后居中显示消息框的方法</h2>
+    <input type="button" class="btn" value="单击弹出消息框"/>
+    <div class="mask"></div>
+    <div class="mess">
+        <p>确定要删除吗？</p>
+        <p><input type="button" value="确定" class="btn1"/>
+            <input type="button" value="取消" class="btn2"/></p>
+    </div>
+
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+    $(function () {
+        //点击按钮的时候触发
+        $(".btn").click(function () {
+            $(".mask").show();
+            center($(".mess"))
+            check($(this).parent(),$(".btn1"),$(".btn2"))
+        })
+        //滚动条滚动的时候触发
+        $(window).scroll(function () {
+            center($(".mess"))
+        })
+        //当窗口发生改变的时候触发
+        $(window).resize(function () {
+            center($(".mess"))
+        })
+
+
+        function check(obj,obj1,obj2){
+            //点击取消
+            obj2.click(function () {
+                closed($(".mask"),$(".mess"))
+            })
+
+            //点击确定
+            obj1.click(function () {
+                closed($(".mask"),$(".mess"))
+                obj.remove();
+            })
+        }
+
+
+        // 隐藏 的操作
+        function closed(obj1, obj2) {
+            obj1.hide();
+            obj2.hide();
+        }
+
+
+        function center(obj) {
+            //获取可视区域的宽度和高度
+            var viewWidth = $(window).width();
+            var viewHeight = $(window).height();
+            //获取滚动条滚动的高度
+            var scrollHeight = $(window).scrollTop();
+            //让元素进行居中,获取当前元素距离左和上居中的距离
+            var objLeft = (viewWidth - obj.outerWidth())/2;
+            var objTop = (viewHeight - obj.outerHeight())/2 + scrollHeight;
+            //设置样式
+            obj.css({left : objLeft, top : objTop}).show()
+        }
+    })
+</script>

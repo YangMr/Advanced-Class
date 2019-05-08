@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="btn">去除HTML TAG</button>
+    <div>
+        <p>我想好好</p>
+        <p>我想好好</p>
+        <p>我想好好</p>
+        <p>我想好好</p>
+        <p>我想好好</p>
+    </div>
+    <input type="text">
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+
+    $(function () {
+        //去除标签的正则表达式
+        var regExp = /<("[^"]*"|'[^']*'|[^'">])*>/ig
+        $("#btn").click(function () {
+            $("div").html($("div").html().replace(regExp,"hello"))
+        })
+    })
+
+</script>

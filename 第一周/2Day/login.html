@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>后台管理系统登录</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="login">
+    <div class="loginmain">
+        <h4>登录管理系统</h4>
+        <form action="/" method="get">
+
+            <ul>
+                <li>
+                    <span>管理员账号：</span>
+                    <input type="text" name="username" value="">
+                </li>
+                <li>
+                    <span>管理员密码：</span>
+                    <input type="password" name="password" value="">
+                </li>
+                <li>
+                    <span>登录验证码：</span>
+                    <input type="text" name="verify" value="">
+                </li>
+                <li>
+                    <div class="verifyimg">
+                        <img src="img/verifyimg.png" height="40" width="200">
+                    </div>
+                </li>
+                <li>
+                    <input type="button" name="loginbtn" value="登录">
+                    <span id="text"></span>
+                </li>
+            </ul>
+
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script>
+    $(function () {
+        //获取元素
+        var $name = $("input[name='username']"); //获取账号
+        var $password = $("input[name='password']"); //获取密码
+        var $verify = $("input[name='verify']");  //获取验证码
+        $("input[name='loginbtn']").click(function () {
+            var _name = $.trim($name.val()); //去除账号的数位空格
+            var _password = $.trim($password.val()); //去除密码的首尾空格
+            var _verify = $.trim($verify.val());  //去除验证码的首尾空格
+            if(_name == ""){
+                $name.focus()
+                $("#text").text("请输入用户名");
+                return;
+            }
+            if(_password == ""){
+                $password.focus()
+                $("#text").text("请输入密码");
+                return;
+            }
+            if(_verify == ""){
+                $verify.focus()
+                $("#text").text("请输入验证码");
+                return;
+            }
+
+            if(!(_verify == data.verifyCode)){
+                $verify.focus()
+                $("#text").text("验证码输入错误,请重新输入");
+                return;
+            }
+            window.location.href = "https://www.baidu.com"
+        })
+
+        function checkUser(str){
+            var re = /^[a-zA-z]\w{3,15}$/;
+            if(re.test(str)){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        //验证账号
+        $name.blur(function () {
+            if(!checkUser($name.val())){
+                $("#text").text("输入不合法,请重新输入");
+            }else{
+                $("#text").text("");
+            }
+        })
+
+        //校验密码：只能输入6-20个字母、数字、下划线
+        function isPasswd(s)
+        {
+            var patrn=/^(\w){6,20}$/;
+            if (!patrn.exec(s)) return false
+            return true
+        }
+
+        //验证密码
+        $password.blur(function () {
+            if(!isPasswd($password.val())){
+                $("#text").text("密码不正确,请重新输入");
+            }else{
+                $("#text").text("");
+            }
+        })
+
+        var data = null;
+        //通过ajax获取验证码的数据
+        $.ajax({
+            url : "https://api.apishop.net/common/verify/getSimpleVerifyImage",
+            data : {
+                apiKey : "PxPlhAH1fedfa9cb4057fbfb2bc891f76796c58f6ccb4e1",
+                codeType : 6
+            },
+            type : "post",
+            success : function (response) {
+               data = JSON.parse(response).result;
+               console.log(data)
+               $(".verifyimg img").attr("src",data.fileName);
+            },
+            error : function (error) {
+                console.log(error)
+            },
+            timeout : 2000
+        })
+
+
+
+
+
+
+        //表单验证
+       /* $('input[name="loginbtn"]').click(function(event) {
+            var $name = $('input[name="username"]');
+            var $password = $('input[name="password"]');
+            var $verify = $('input[name="verify"]');
+            var $text = $('#text');
+            var _name = $.trim($name.val());
+            var _password = $.trim($password.val());
+            var _verify = $.trim($verify.val());
+
+            if('' == _name){
+                $text.text('请输入用户名！');
+                $name.focus();
+                return;
+            }
+            if('' == _password){
+                $text.text('请输入密码！');
+                $password.focus();
+                return;
+            }
+           /!* if('' == _verify){
+                $text.text('请输入请输入验证码！');
+                $verify.focus();
+                return;
+            }*!/
+
+            $text.text('登录成功，请稍候！');
+
+        });*/
+    });
+</script>
+</body>
+</html>

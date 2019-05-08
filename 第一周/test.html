@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>手机滑屏tab菜单</title>
+    <style type="text/css">
+        body,td,th,ul,li{
+            font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+            padding:0;
+            margin:0;
+        }
+        a {
+            color: #333;
+            text-decoration:none;
+            cursor:pointer;
+        }
+        .find_nav {
+            width: 100%;
+            height: 70px;
+            background-color: #f9f9f9;
+            position: fixed;
+            top: 0;
+            z-index: 9999;
+            border-bottom: 1px solid #ddd;
+            display: -moz-box;
+            display: -webkit-box;
+            display: box;
+        }
+        .find_nav_left {
+            height: 70px;
+            position: relative;
+            overflow: hidden;
+            -moz-box-flex: 1;
+            -webkit-box-flex: 1;
+            box-flex: 1;
+        }
+        .find_nav_list {
+            position: absolute;
+            left: 0;
+        }
+        .find_nav_list ul {
+            position: relative;
+            white-space: nowrap;
+            font-size: 0;
+        }
+        .find_nav_list ul li {
+            display: inline-block;
+            padding: 0;
+            margin:0 20px;
+        }
+        .find_nav_list ul li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            line-height: 70px;
+            font-size: 24px;
+            text-align: center;
+            color: #666;
+        }
+        .find_nav_cur a {
+            color: #48a5f4 !important;
+        }
+        .find_nav_list a.active{ color:#C00}
+        .sideline {
+            display: block;
+            position: absolute;
+            border: 0;
+            height: 2px;
+            background-color: #48a5f4;
+            left: 0;
+            top: 68px;
+            pointer-events: none;
+        }
+        .li_list{
+            min-height:800px;
+            font-size:40px;
+            line-height:800px;
+            color:#fff;
+            text-align:center}
+        .swipe{ padding:70px 0 0 0;}
+    </style>
+</head>
+
+<body>
+
+<div class="find_nav">
+    <div class="find_nav_left">
+        <div class="find_nav_list" id="pagenavi1">
+            <ul>
+
+                <li><a href="#" class="active">每日更新</a></li>
+                <li><a href="#">精品首推</a></li>
+                <li><a href="#">时尚包包</a></li>
+                <li><a href="#">T恤</a></li>
+                <li><a href="#">运动品牌</a></li>
+                <li><a href="#">香水化妆品</a></li>
+                <li><a href="#">阿迪达斯</a></li>
+                <li><a href="#">耐克</a></li>
+                <li><a href="#">范思哲</a></li>
+                <li><a href="#">古驰</a></li>
+                <li class="sideline"></li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<div id="slider1" class="swipe">
+    <ul class="box01_list">
+        <li class="li_list" style="background:#db7575">1</li>
+        <li class="li_list" style="background:#75b140">2</li>
+        <li class="li_list" style="background:#b16b40">3</li>
+        <li class="li_list" style="background:#4053b1">4</li>
+        <li class="li_list" style="background:#b14080">5</li>
+        <li class="li_list" style="background:#4dd1b3">6</li>
+        <li class="li_list" style="background:#bea30e">7</li>
+        <li class="li_list" style="background:#865bb3">8</li>
+        <li class="li_list" style="background:#69b03f">9</li>
+        <li class="li_list" style="background:#c25e28">10</li>
+    </ul>
+
+</div>
+
+
+<script type="text/javascript" src="1Day/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/touchslider.js"></script>
+<script type="text/javascript">
+    $(".find_nav_list").css("left",0);
+
+    $(".find_nav_list li").each(function(){
+        $(".sideline").css({left:0});
+        $(".find_nav_list li").eq(0).addClass("find_nav_cur").siblings().removeClass("find_nav_cur");
+    });
+    var nav_w=$(".find_nav_list li").first().width();
+    $(".sideline").width(nav_w);
+    $(".find_nav_list li").on('click', function(){
+        nav_w=$(this).width();
+        $(".sideline").stop(true);
+        $(".sideline").animate({left:$(this).position().left},300);
+        $(".sideline").animate({width:nav_w});
+        $(this).addClass("find_nav_cur").siblings().removeClass("find_nav_cur");
+        var fn_w = ($(".find_nav").width() - nav_w) / 2;
+        var fnl_l;
+        var fnl_x = parseInt($(this).position().left);
+        if (fnl_x <= fn_w) {
+            fnl_l = 0;
+        } else if (fn_w - fnl_x <= flb_w - fl_w) {
+            fnl_l = flb_w - fl_w;
+        } else {
+            fnl_l = fn_w - fnl_x;
+        }
+        $(".find_nav_list").animate({
+            "left" : fnl_l
+        }, 300);
+
+    });
+    var fl_w=$(".find_nav_list").width();
+    var flb_w=$(".find_nav_left").width();
+    $(".find_nav_list").on('touchstart', function (e) {
+        var touch1 = e.originalEvent.targetTouches[0];
+        x1 = touch1.pageX;
+        y1 = touch1.pageY;
+        ty_left = parseInt($(this).css("left"));
+    });
+    $(".find_nav_list").on('touchmove', function (e) {
+        var touch2 = e.originalEvent.targetTouches[0];
+        var x2 = touch2.pageX;
+        var y2 = touch2.pageY;
+        if(ty_left + x2 - x1>=0){
+            $(this).css("left", 0);
+        }else if(ty_left + x2 - x1<=flb_w-fl_w){
+            $(this).css("left", flb_w-fl_w);
+        }else{
+            $(this).css("left", ty_left + x2 - x1);
+        }
+        if(Math.abs(y2-y1)>0){
+            e.preventDefault();
+        }
+    });
+
+
+    for(n=1;n<9;n++){
+        var page='pagenavi'+n;
+        var mslide='slider'+n;
+        var mtitle='emtitle'+n;
+        arrdiv = 'arrdiv' + n;
+        var as=$("#page a");
+        var tt=new TouchSlider({
+            id:mslide,
+            "auto":"-1",
+            direction:'left',
+            speed:600,
+            timeout:5000,
+            'before':function(index){
+                var as=document.getElementById(this.page).getElementsByTagName('a');
+                as[this.p].className='';
+                this.p=index;
+
+                fnl_x =  parseInt($(".find_nav_list li").eq(this.p).position().left);
+
+                nav_w=$(".find_nav_list li").eq(this.p).width();
+                $(".sideline").stop(true);
+                $(".sideline").animate({left:$(".find_nav_list li").eq(this.p).position().left},300);
+                $(".sideline").animate({width:nav_w},100);
+                $(".find_nav_list li").eq(this.p).addClass("find_nav_cur").siblings().removeClass("find_nav_cur");
+                var fn_w = ($(".find_nav").width() - nav_w) / 2;
+                var fnl_l;
+                if (fnl_x <= fn_w) {
+                    fnl_l = 0;
+                } else if (fn_w - fnl_x <= flb_w - fl_w) {
+                    fnl_l = flb_w - fl_w;
+                } else {
+                    fnl_l = fn_w - fnl_x;
+                }
+                $(".find_nav_list").animate({
+                    "left" : fnl_l
+                }, 300);
+            }});
+        tt.page = page;
+        tt.p = 0;
+        for(var i=0;i<as.length;i++){
+            (function(){
+                var j=i;
+                as[j].tt = tt;
+                as[j].onclick=function(){
+                    this.tt.slide(j);
+                    return false;
+                }
+            })();
+        }
+    }
+</script>
+
+</body>
+</html>

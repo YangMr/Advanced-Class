@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2 id="h2-caption">超实用的jQuery代码段 - jQuery获取当前元素的索引值</h2>
+    <button>获取index索引值</button>
+    <ul>
+        <li>苹果</li>
+        <li class="css-li-index">香蕉</li>
+        <li class="css-li-index" id="id-li-sel">橙子</li>
+    </ul>
+    <p>请单击"获取index索引值"按钮</p>
+    <p>以获得 id="id-li-sel"的元素</p>
+    <p>且相对于 jQuery选择器 (class="css-li-index")的 index索引值</p>
+
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+
+    $(function () {
+        $("button").click(function () {
+            alert($(this).index())
+        })
+    })
+
+</script>

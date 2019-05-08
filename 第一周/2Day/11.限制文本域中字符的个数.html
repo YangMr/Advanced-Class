@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2 id="h2-caption">超实用的jQuery代码段 - jQuery如何限制文本域中字符的个数</h2>
+    <p>
+        <b>最大输入字符个数:</b>
+        <input type="text" id="id-text-maxLen" style="width:32px;" value="10"/>
+    </p>
+    <p>
+        <input type="button" id="id-button-maxLen" value="限制文本域中字符的个数"/>
+    </p>
+    <div>
+        <textarea id="id-maxLenTextarea"  name="maxLenTextarea">
+        </textarea>
+    </div>
+    <div id="div-log">
+        <p>日志记录：</p>
+    </div>
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+
+    $(function () {
+        var iMaxLen = null;
+        $("#id-button-maxLen").click(function () {
+            //获取输入默认设置的最大输入字符数
+            var vMaxLen=$('input#id-text-maxLen').val();
+            //将它转化为Number
+            iMaxLen=parseInt(vMaxLen);
+
+            //设置log
+            $("#div-log").html("日志记录："+"<p>"+"最大输入字符个数设定为:"+vMaxLen+"个"+"</p>");
+        })
+
+        $("#id-maxLenTextarea").keypress(function () {
+            $(this).attr("maxLength",iMaxLen)
+        })
+    })
+
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h2 id="h2-caption">超实用的jQuery代码段 - jQuery如何验证某个元素是否为空</h2>
+    <hr><br>
+    <!--<label id="element">
+    </label>-->
+    <br><hr>
+    <div id="div-log">
+        <p>日志记录：</p>
+    </div>
+
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+
+    $(function () {
+        var len = $("#element").length;
+        if(len > 0){
+            alert("网页当中有这个元素")
+        }else{
+            alert("网页当中没有这个元素")
+        }
+    })
+
+</script>
