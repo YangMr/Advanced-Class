@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--用来排序的无序列表元素-->
+    <ul id="ul1">
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Bananas</li>
+        <li>Peach</li>
+    </ul>
+    <!--单击按钮来进行排序-->
+    <a href="#" id="link">单击这里排序</a>
+
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+
+    $(function () {
+       $("#link").click(function () {
+           var mylist = $('ul');                         //获取ul对象
+           var listitems = mylist.children('li').get();  //获取ul对象中的所有li元素,使用get转换为数组
+
+           listitems.sort(function(a, b) {              //调用Array对象的sort方法进行排序
+               var compA = $(a).text().toUpperCase();     //转换字符值为大写
+               var compB = $(b).text().toUpperCase();
+               //比较2个字符串，如果大于则返回1，等于返回0，于小返回-1
+               return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
+           })
+
+           $.each(listitems, function(idx, element) {
+               mylist.append(element);
+           });
+
+       })
+    })
+
+</script>

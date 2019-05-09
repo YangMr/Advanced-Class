@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #award{width: 200px; text-align: center; line-height: 200px; height: 200px; border:1px solid #ccc; margin: 0 auto;}
+    </style>
+</head>
+<body>
+    简单的随机问答：
+    <div id="award"></div>
+    <hr>
+    <button id="start" accesskey="s">开始(<U>S</U>)</button>
+    <button id="stop"  accesskey="o">停止(<U>O</U>)</button>
+
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+
+    $(function () {
+        //1.创建抽奖人员的数据
+        var str = "贺江涛,孙珂,周晓,王重清,卢鑫栋,杨康,张斌";
+        //2.将字符串数据切割为数组
+        var array = str.split(",");
+        //3.创建随机数方法
+        function getRandom(min,max) {
+            return parseInt(Math.random()*(max-min+1));
+        }
+
+        //将数据展示道div里面
+        var timer = null;
+
+        function changeCon(){
+            $("#award").html(array[getRandom(1,7)])
+        }
+
+
+        $("#start").click(function () {
+            timer = setInterval(changeCon,30)
+        });
+
+        $("#stop").click(function () {
+            clearInterval(timer)
+        })
+
+    })
+
+</script>

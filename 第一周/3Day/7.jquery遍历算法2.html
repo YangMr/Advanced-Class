@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+
+    $(function () {
+        var array = ["英雄联盟","王者荣耀","和平精英","第五人格"];
+        $.each(array,function (index,element) {
+            $("li").eq(index).html(element)
+        })
+    })
+
+</script>

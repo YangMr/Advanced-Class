@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div1">               <!--根节点-->
+
+    <div id="div2">              <!--包含子节点的父节点-->
+        <p></p>
+    </div>
+
+    <div id="div3" class="a">   <!--包含子节点的父节点-->
+        <p></p>
+    </div>
+
+    <div id="div4">             <!--包含子节点的父节点-->
+        <p></p>
+    </div>
+
+</div>
+
+<div id="result"></div>
+
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+
+    $(function () {
+        //1.获取p元素的父元素
+        var ctl = $("p").parent();
+       //输出p元素的父元素
+        $("#result").append("p元素的父元素列表：" );
+
+        //遍历ctl
+        ctl.each(function (index,element) {
+            $("#result").append(element.id+" ");
+        })
+
+        //进行换行
+        $("#result").append("<br/>类为a的元素的父元素：");
+
+        //获取类名为a的父元素
+         ctl = $(".a").parent()
+
+        //遍历ctl
+        ctl.each(function (index,element) {
+            $("#result").append(element.id + "");
+        })
+
+        //进行换行
+        $("#result").append("<br/>取得p元素的祖先元素: ");
+
+        //取得p元素的祖先元素
+        ctl = $("p").parent().parent();
+
+        //遍历ctl
+        ctl.each(function (index,element) {
+            $("#result").append(element.id + " ");
+        })
+
+        //获取p元素的父元素列表
+        $("#result").append("<br/>p元素的父元素列表：");
+
+        ctl = $("p").parents();
+
+        //遍历ctl
+        ctl.each(function (index,element) {
+            console.log(element)
+            $("#result").append(element.id + " ");
+        })
+    })
+
+</script>

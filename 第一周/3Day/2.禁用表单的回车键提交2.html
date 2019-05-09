@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<form action="demo.php" method="post">
+    <input type="text" name="t1">
+    <input type="text" name="t2">
+    <input type="submit" value="提交">
+</form>
+
+
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+    $(function () {
+        $("input").keypress(function (e) {
+            var keyCode=e.keyCode?e.keyCode:e.which?e.which:e.charCode;
+            if(keyCode == 13){
+                for(var i=0;i<this.form.elements.length; i++){
+                    if(this == this.form.elements[i]) break;
+                }
+                i=(i+1)%this.form.elements.length;
+                this.form.elements[i].focus();
+                return false;
+            }else{
+                return true;
+            }
+
+
+        })
+    })
+</script>

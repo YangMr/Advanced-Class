@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font:62.5% "Trebuchet MS", sans-serif;
+            margin:64px;
+        }
+        #h2-caption {
+            font:20px "Trebuchet MS", sans-serif;
+        }
+        p {
+            font:16px "Trebuchet MS", sans-serif;
+        }
+        .demoHeaders {
+            margin-top:2em;
+        }
+        form {
+            font:16px "Trebuchet MS", sans-serif;
+        }
+        #div-log {
+            font:13.5px "Trebuchet MS", sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <h2 id="h2-caption">超实用的jQuery代码段 - jQuery禁用表单的回车键提交</h2>
+    <hr><br>
+    <form action="javascript:;" method="post">
+        Name: <input type="text" name="name"/>
+        Age: <input type="text" name="age"/>
+        <input type="submit" value="提交"/>
+    </form>
+    <br><hr>
+    <div id="div-log">
+        <p>日志记录：</p>
+    </div>
+
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+    $(function () {
+        $("input").keypress(function (e) {
+            var keyCode= e.keyCode ? e.keyCode: e.which ? e.which: e.charCode;
+            if(keyCode==13){
+                for(var i=0;i<this.form.elements.length;i++){
+                    if(this==this.form.elements[i]) break;
+                }
+                i=(i+1)%this.form.elements.length;
+                this.form.elements[i].focus();
+                $("#div-log").html($("#div-log").html()+"<p>"+"keypress()函数 ：禁用表单的回车键提交"+"</p>");
+                return false;
+            }else{
+                return true;
+            }
+
+        })
+    })
+</script>

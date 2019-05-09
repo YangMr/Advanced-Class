@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+
+    $(function () {
+        //1.创建数组
+        var array = [1,2,2,4,9,6,7,5,2,3,5,6,5];
+
+        //进行去重
+        function unique() {
+            var temp = []
+            $.each(array,function (index,element) {
+                if(temp.indexOf(element) == -1){
+                    temp.push(element);
+                }
+            })
+            return temp;
+        }
+
+        console.log(unique())
+    })
+
+</script>

@@ -2,44 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aeb24252-aef0-4727-a907-1262a318aeef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/1.iframe.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/1.iframe2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/10.从元素当中去除HTML标签.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/11.限制文本域中字符的个数.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/2.location.href.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/3.trim.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/4.延迟加载.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/4.延迟加载2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/4.延迟加载3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/5.页面加载后消息框居中显示.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/6.验证某个元素是否为空.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/7.检查特定的HTML元素是否存在.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/8.获取当前元素的索引值.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/8.获取当前元素的索引值2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/9.将事件和函数绑定到元素.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/9.将事件和函数绑定到元素2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/css/reset.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/img/p1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/img/p10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/img/p11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/img/p12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/img/p2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/img/p3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/img/p4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/img/p5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/img/p6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/img/p7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/img/p8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/img/p9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/img/wait_load.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/js/jquery-1.8.3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/page/gongsijieshao.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/page/lanmuguanli.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/page/main.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/2Day/page/wangzhanshezhi.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第一周/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第一周/2Day/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第一周/3Day/1.jquery祖先算法.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第一周/3Day/1.如何选中页面上所有的复选框.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第一周/3Day/1.如何选中页面上所有的复选框2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第一周/3Day/10.数组去重.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第一周/3Day/11.冒泡排序.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第一周/3Day/12.jquery冒泡排序.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第一周/3Day/13.获取URL后面的HASH参数.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第一周/3Day/14.对一个列表进行排序.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第一周/3Day/15.实现JSON对象数组的排序.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第一周/3Day/2.禁用表单的回车键提交.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第一周/3Day/2.禁用表单的回车键提交2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第一周/3Day/3.禁用右键单击上下文菜单事件.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第一周/3Day/4.IE下禁用文本选择功能.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第一周/3Day/5.输入框获取焦点时文本框高亮提示.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第一周/3Day/6.取得列表控件选中的option对象.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第一周/3Day/7.jquery遍历算法.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第一周/3Day/7.jquery遍历算法2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第一周/3Day/7.jquery遍历算法3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第一周/3Day/8.jquery后代算法.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第一周/3Day/9.模拟抽奖程序.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第一周/3Day/js/jquery-1.8.3.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -52,13 +36,105 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/第一周/3Day/7.jquery遍历算法3.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/第一周/3Day/1.jquery祖先算法.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="70" column="31" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/第一周/3Day/8.jquery后代算法.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/第一周/3Day/9.模拟抽奖程序.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="141">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/第一周/3Day/10.数组去重.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/第一周/3Day/11.冒泡排序.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="681">
+              <caret line="21" column="13" selection-start-line="16" selection-start-column="9" selection-end-line="21" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/第一周/3Day/12.jquery冒泡排序.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-36">
+              <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/第一周/3Day/13.获取URL后面的HASH参数.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/第一周/3Day/14.对一个列表进行排序.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="429">
+              <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/第一周/3Day/15.实现JSON对象数组的排序.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="54" column="12" selection-start-line="50" selection-start-column="2" selection-end-line="54" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="XHTML File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -74,28 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/第一周/1Day/1.2 切换页面的显示或隐藏2.html" />
-        <option value="$PROJECT_DIR$/第一周/1Day/1.2 切换页面的显示或隐藏3.html" />
-        <option value="$PROJECT_DIR$/第一周/1Day/1.2 切换页面的显示或隐藏4.html" />
-        <option value="$PROJECT_DIR$/第一周/1Day/1.3 实现幻灯片式的淡入淡出效果.html" />
-        <option value="$PROJECT_DIR$/第一周/1Day/1.4 切换页面的淡入淡出.html" />
-        <option value="$PROJECT_DIR$/第一周/1Day/1.4 切换页面的淡入淡出2.html" />
-        <option value="$PROJECT_DIR$/第一周/1Day/1.4 切换页面的淡入淡出3.html" />
-        <option value="$PROJECT_DIR$/第一周/1Day/1.5 页面的滑动隐藏.html" />
-        <option value="$PROJECT_DIR$/第一周/1Day/1.6 切换页面的滑动.html" />
-        <option value="$PROJECT_DIR$/第一周/1Day/css/reset.css" />
-        <option value="$PROJECT_DIR$/第一周/1Day/1.7 图片的动画效果.html" />
-        <option value="$PROJECT_DIR$/第一周/1Day/1.7 图片的动画效果2.html" />
-        <option value="$PROJECT_DIR$/第一周/1Day/1.8 停止动画效果.html" />
-        <option value="$PROJECT_DIR$/第一周/1Day/1.7 图片的动画效果3.html" />
-        <option value="$PROJECT_DIR$/第一周/1Day/1.9 回调函数.html" />
-        <option value="$PROJECT_DIR$/第一周/1Day/1.9 callBack.html" />
-        <option value="$PROJECT_DIR$/第一周/1Day/server.js" />
-        <option value="$PROJECT_DIR$/第一周/1Day/1.10 提高效率的链式操作.html" />
-        <option value="$PROJECT_DIR$/第一周/1Day/1.10 提高效率的链式操作2.html" />
-        <option value="$PROJECT_DIR$/第一周/1Day/1.11 在新窗口中打开链接.html" />
-        <option value="$PROJECT_DIR$/第一周/1Day/1.11 在新窗口中打开链接2.html" />
-        <option value="$PROJECT_DIR$/第一周/1Day/1.11 在新窗口中打开链接3.html" />
         <option value="$PROJECT_DIR$/第一周/1Day/1.12 平滑滚动页面道某个锚点.html" />
         <option value="$PROJECT_DIR$/第一周/实现左右div自适应相同高度.html" />
         <option value="$PROJECT_DIR$/第一周/1Day/实现左右div自适应相同高度.html" />
@@ -125,6 +179,28 @@
         <option value="$PROJECT_DIR$/第一周/2Day/9.将事件和函数绑定到元素2.html" />
         <option value="$PROJECT_DIR$/第一周/2Day/10.从元素当中去除HTML标签.html" />
         <option value="$PROJECT_DIR$/第一周/2Day/11.限制文本域中字符的个数.html" />
+        <option value="$PROJECT_DIR$/第一周/2Day/README.md" />
+        <option value="$PROJECT_DIR$/第一周/3Day/1.如何选中页面上所有的复选框.html" />
+        <option value="$PROJECT_DIR$/第一周/3Day/1.如何选中页面上所有的复选框2.html" />
+        <option value="$PROJECT_DIR$/第一周/3Day/2.禁用表单的回车键提交.html" />
+        <option value="$PROJECT_DIR$/第一周/3Day/2.禁用表单的回车键提交2.html" />
+        <option value="$PROJECT_DIR$/第一周/3Day/3.禁用右键单击上下文菜单事件.html" />
+        <option value="$PROJECT_DIR$/第一周/3Day/4.IE下禁用文本选择功能.html" />
+        <option value="$PROJECT_DIR$/第一周/3Day/5.输入框获取焦点时文本框高亮提示.html" />
+        <option value="$PROJECT_DIR$/第一周/3Day/6.取得列表控件选中的option对象.html" />
+        <option value="$PROJECT_DIR$/第一周/3Day/7.jquery遍历算法.html" />
+        <option value="$PROJECT_DIR$/第一周/3Day/7.jquery遍历算法2.html" />
+        <option value="$PROJECT_DIR$/第一周/3Day/7.jquery遍历算法3.html" />
+        <option value="$PROJECT_DIR$/第一周/3Day/8.jquery祖先算法.xhtml" />
+        <option value="$PROJECT_DIR$/第一周/3Day/1.jquery祖先算法.html" />
+        <option value="$PROJECT_DIR$/第一周/3Day/8.jquery后代算法.html" />
+        <option value="$PROJECT_DIR$/第一周/3Day/9.模拟抽奖程序.html" />
+        <option value="$PROJECT_DIR$/第一周/3Day/10.数组去重.html" />
+        <option value="$PROJECT_DIR$/第一周/3Day/11.冒泡排序.html" />
+        <option value="$PROJECT_DIR$/第一周/3Day/12.jquery冒泡排序.html" />
+        <option value="$PROJECT_DIR$/第一周/3Day/13.获取URL后面的HASH参数.html" />
+        <option value="$PROJECT_DIR$/第一周/3Day/14.对一个列表进行排序.html" />
+        <option value="$PROJECT_DIR$/第一周/3Day/15.实现JSON对象数组的排序.html" />
       </list>
     </option>
   </component>
@@ -149,6 +225,17 @@
               <item name="Advanced-Class" type="b2602c69:ProjectViewProjectNode" />
               <item name="Advanced-Class" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Advanced-Class" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Advanced-Class" type="462c0819:PsiDirectoryNode" />
+              <item name="第一周" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Advanced-Class" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Advanced-Class" type="462c0819:PsiDirectoryNode" />
+              <item name="第一周" type="462c0819:PsiDirectoryNode" />
+              <item name="3Day" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -164,14 +251,14 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\承乾灵殊\Desktop\Advanced-Class\第一周\1Day" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\承乾灵殊\Desktop\Advanced-Class\第一周\3Day" />
       <recent name="C:\Users\承乾灵殊\Desktop\Advanced-Class\第一周\2Day" />
       <recent name="C:\Users\承乾灵殊\Desktop\Advanced-Class\第一周\2Day\css" />
       <recent name="C:\Users\承乾灵殊\Desktop\Advanced-Class\第一周\2Day\img" />
       <recent name="C:\Users\承乾灵殊\Desktop\Advanced-Class\第一周\2Day\page" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\承乾灵殊\Desktop\Advanced-Class\第一周\1Day" />
     </key>
   </component>
@@ -198,22 +285,20 @@
       <option name="presentableId" value="Default" />
       <updated>1557192486574</updated>
       <workItem from="1557192492461" duration="37704000" />
+      <workItem from="1557364388714" duration="18968000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37704000" />
+    <option name="totallyTimeSpent" value="56672000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1748512" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.13839285" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -221,6 +306,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -230,167 +319,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/第一周/1Day/1.3 实现幻灯片式的淡入淡出效果.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="54" column="14" lean-forward="true" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一周/1Day/1.4 切换页面的淡入淡出.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="45" column="37" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一周/1Day/1.4 切换页面的淡入淡出2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="46" column="41" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一周/1Day/1.4 切换页面的淡入淡出3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一周/1Day/1.5 页面的滑动隐藏.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一周/1Day/1.6 切换页面的滑动.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一周/1Day/css/reset.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一周/1Day/1.7 图片的动画效果.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="27" column="22" lean-forward="true" selection-start-line="25" selection-start-column="21" selection-end-line="27" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一周/1Day/1.1 显示或隐藏网页内容2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="10" column="12" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一周/1Day/1.8 停止动画效果.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="53" column="35" selection-start-line="53" selection-start-column="35" selection-end-line="53" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一周/1Day/1.7 图片的动画效果2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一周/1Day/1.7 图片的动画效果3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一周/1Day/1.9 回调函数.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一周/1Day/server.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一周/1Day/1.9 callBack.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一周/1Day/1.10 提高效率的链式操作.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一周/1Day/1.10 提高效率的链式操作2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="29" column="69" selection-start-line="29" selection-start-column="69" selection-end-line="29" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一周/1Day/1.11 在新窗口中打开链接.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="7" column="49" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一周/1Day/1.11 在新窗口中打开链接2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="16" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一周/1Day/1.11 在新窗口中打开链接3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="17" column="46" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一周/1Day/1.12 平滑滚动页面道某个锚点.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="70" column="9" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一周/1Day/实现左右div自适应相同高度.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一周/1Day/1.17 获取鼠标在屏幕当中的坐标.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/第一周/1Day/1.18 获取鼠标在窗口客户区当中的坐标.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
@@ -419,23 +347,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jQuery.Code/ch01/midAlert.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="56" column="23" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第一周/1Day/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="144">
-            <caret line="4" column="11" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="11" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/jQuery.Code/ch01/midAlert.html" />
     <entry file="file://$PROJECT_DIR$/第一周/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2304">
@@ -590,6 +502,182 @@
           <folding>
             <element signature="n#style#0;n#input#0;n#p#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/2Day/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="180">
+            <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/1Day/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="14" lean-forward="true" selection-start-column="4" selection-end-column="14" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/3Day/js/jquery-1.8.3.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/3Day/1.如何选中页面上所有的复选框.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/3Day/2.禁用表单的回车键提交.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/3Day/2.禁用表单的回车键提交2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/3Day/3.禁用右键单击上下文菜单事件.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/3Day/4.IE下禁用文本选择功能.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/3Day/5.输入框获取焦点时文本框高亮提示.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="29" />
+          <folding>
+            <element signature="e#205#211#0" expanded="true" />
+            <element signature="e#211#217#0" expanded="true" />
+            <element signature="e#285#291#0" expanded="true" />
+            <element signature="e#291#297#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/3Day/6.取得列表控件选中的option对象.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/3Day/1.如何选中页面上所有的复选框2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/3Day/7.jquery遍历算法.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="23" column="9" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="23" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/3Day/7.jquery遍历算法2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/3Day/8.jquery祖先算法.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="3" column="35" lean-forward="true" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/3Day/7.jquery遍历算法3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/3Day/1.jquery祖先算法.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="70" column="31" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/3Day/8.jquery后代算法.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/3Day/9.模拟抽奖程序.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/3Day/10.数组去重.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/3Day/11.冒泡排序.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="681">
+          <caret line="21" column="13" selection-start-line="16" selection-start-column="9" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/3Day/12.jquery冒泡排序.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-36">
+          <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/3Day/13.获取URL后面的HASH参数.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/3Day/14.对一个列表进行排序.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第一周/3Day/15.实现JSON对象数组的排序.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="54" column="12" selection-start-line="50" selection-start-column="2" selection-end-line="54" selection-end-column="12" />
         </state>
       </provider>
     </entry>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table.gridtable {
+            font-family: verdana,arial,sans-serif;
+            font-size:11px;
+            color:#333333;
+            border-width: 1px;
+            border-color: #666666;
+            border-collapse: collapse;
+            float:left;
+            margin-left:30px;
+        }
+        table.gridtable th {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #dedede;
+        }
+        table.gridtable td {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #ffffff;
+        }
+        .tbllayout{
+            width:1000px;
+        }
+    </style>
+</head>
+<body>
+<div id="tbllayout">
+    <!--未经排序的HTML表格-->
+    <table class="gridtable" id='ia' border="1">
+        <tr>
+            <th>员工工号</th><th>员工姓名</th><th>员工年龄</th>
+        </tr>
+    </table>
+    <!--按员工工号排序的HTML表格-->
+    <table class="gridtable" id='ib' border="1">
+        <tr>
+            <th>员工工号[排序]</th><th>员工姓名</th><th>员工年龄</th>
+        </tr>
+    </table>
+    <!--按员工年龄排序的HTML表格-->
+    <table class="gridtable" id='ic' border="1">
+        <tr>
+            <th>员工工号</th><th>员工姓名</th><th>员工年龄[排序]</th>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+
+    $(function () {
+        //创建数据
+        var peoples =[
+            {'card_id':'P0001','p_name':'张三','p_age':18},
+            {'card_id':'P0003','p_name':'赵六','p_age':23},
+            {'card_id':'P0002','p_name':'李四','p_age':42},
+            {'card_id':'P0004','p_name':'王五','p_age':35}
+            ];
+
+        $.each(peoples,function (index,element) {
+           var $tr = $("<tr><td>"+ element.card_id +"</td><td>"+ element.p_name +"</td><td>"+element.p_age+"</td></tr>")
+            $("#ia").append($tr)
+        })
+
+        //根据员工工号排序数据
+        var card_people = peoples.sort(function (a,b) {
+            if(a.card_id>b.card_id){
+                return 1;
+            }else if(a.card_id<b.card_id){
+                return -1;
+            }else if(a.card_id == b.card_id){
+                return 0
+            }
+        })
+
+        $.each(card_people,function (index,element) {
+            var $tr = $("<tr><td>"+ element.card_id +"</td><td>"+ element.p_name +"</td><td>"+element.p_age+"</td></tr>")
+            $("#ib").append($tr)
+        })
+
+        //根据员工年龄进行排序
+       var age_people = peoples.sort(function (a,b) {
+            if(a.p_age>b.p_age){
+                return 1;
+            }else if(a.p_age<b.p_age){
+                return -1;
+            }else if(a.p_age == b.p_age){
+                return 0
+            }
+        })
+
+        $.each(age_people,function (index,element) {
+            var $tr = $("<tr><td>"+ element.card_id +"</td><td>"+ element.p_name +"</td><td>"+element.p_age+"</td></tr>")
+            $("#ic").append($tr)
+        })
+
+    })
+
+</script>

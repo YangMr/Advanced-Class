@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+
+    var array = [9,3,11,4,1]
+
+    function sort(data) {
+        for(var i=0;i<data.length-1;i++){
+            for(var j=0;j<data.length - i - 1;j++){
+               if(data[j] > data[j+1]){
+                    var swap = data[j];
+                    data[j] = data[j + 1];
+                    data[j+1] = swap;
+               }
+            }
+        }
+        return data;
+    }
+
+    console.log(sort(array))
+
+
+</script>

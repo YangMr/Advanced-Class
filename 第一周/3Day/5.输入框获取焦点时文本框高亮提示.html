@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        form .css-text,form .css-text-high{width:160px;height:20px;  padding-left:4px;line-height:20px;}
+        form .css-text-high{background-position:0 -31px;font-weight:bold;color:#0000FF; border:2px solid #f60;}
+        input{outline: none;}
+    </style>
+</head>
+<body>
+    <h2 id="h2-caption">超实用的jQuery代码段 - jQuery输入框获取焦点时关联文本高亮提示</h2>
+    <hr><br>
+    <form>
+        <p><label>文本框:&nbsp;&nbsp;</label><input class="css-text" type="text"/></p>
+        <p><label>文本框:&nbsp;&nbsp;</label><input class="css-text" type="text"/></p>
+    </form>
+    <br><hr>
+    <div id="div-log">
+        <p>日志记录：</p>
+    </div>
+
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+
+    $(function () {
+        $(".css-text").focus(function () {
+            $(this).addClass("css-text-high")
+        })
+        $(".css-text").blur(function () {
+            $(this).removeClass("css-text-high")
+        })
+    })
+
+</script>
