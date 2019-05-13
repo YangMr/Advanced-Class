@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--构建一个表单，表单提交方法为post-->
+<form method="get">
+    <!--构建2个文本域和一个隐藏域-->
+    <div><input type="text" name="a" value="1" id="a" /></div>
+    <div><input type="text" name="b" value="2" id="b" /></div>
+    <div><input type="hidden" name="c" value="3" id="c" /></div>
+    <!--多行文本域-->
+    <div><textarea name="d" rows="8" id="text" cols="40">4</textarea></div>
+    <!--下拉选择域-->
+    <div><select name="e">
+        <option value="5" selected="selected">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+    </select></div>
+    <div>
+        <!--复选框选项-->
+        <input type="checkbox" name="f" value="8" id="f" /><span>单击复选框进行选择</span>
+    </div>
+    <div>
+        <input type="button" name="g" value="提交" id="g" />
+    </div>
+</form>
+<!----显示序列化表单后的结果-->
+<div id="result"></div>
+
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+
+    $(function () {
+        $("#g").click(function () {
+
+            $.ajax({
+                url : "http://localhost:8000/",
+                data : $("form").serialize(),
+                success : function (resposne) {
+                    console.log(resposne)
+                }
+            })
+        })
+    })
+
+</script>

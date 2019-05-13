@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--用来进行随机选择的元素-->
+<ul id="ul1">
+    <li>苹果</li>
+    <li>桔子</li>
+    <li>香焦</li>
+    <li>桃子</li>
+</ul>
+<a href="#" id="lnk">单击这里随机选择</a>
+<!--结果显示部分-->
+<div id="result"></div>
+
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+
+    $(function () {
+        $("#lnk").click(function () {
+            var ul = $("ul");
+            var listItems = ul.children().get();  //4 - 3
+            var num= listItems.length-1;                   //获取数组长度
+
+            var ele=listItems[getRandom(0,num)];	      //调用随机函数获取数组中的元素
+
+            $("#result").html("随机选择的元素为："+$(ele).text()); //显示随机取数结果
+
+        })
+
+        //创建随机数方法
+        function getRandom(min,max){         //创建一个随机函数，用于产生数组长度的随机数
+            return parseInt(Math.random()*(max-min+1));
+        }
+    })
+
+</script>

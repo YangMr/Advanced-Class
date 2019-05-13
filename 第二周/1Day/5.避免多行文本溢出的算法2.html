@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #txt{
+            width:300px;
+            border:1px solid red;
+            padding: 20px;
+            margin: 30px auto;
+        }
+        span{
+            color: blue;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+<div id="txt">很多网站都有文章列表，列表中显示了文章的部分内容，更多的内容显示省略号，单击"显示更多"链接会将其余的内容显示出来，这样即可以让用户看到部分内容，又节省了空间，CSS具有text-overflow:ellipsis属性，可以实现当单行文本溢出显示区域时，显示省略号，但是这个属性不支持多行文本，下面的示例演示了如何创建支持多行文本的溢出显示效果。</div>
+
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+
+    $(function () {
+
+        var currentTextLength = $("#txt").text().length;
+        var content = $("#txt").text().substring(50)
+        if(currentTextLength > 50){
+            $("#txt").text($("#txt").text().substring(0,50))
+
+            $("#txt").html($("#txt").text() + "<span>...</span>" + "<span>查看更多</span>")
+        }
+
+        $("span").click(function () {
+            $(this).html("")
+            $("#txt").text($("#txt").text() +content )
+        })
+    })
+
+</script>

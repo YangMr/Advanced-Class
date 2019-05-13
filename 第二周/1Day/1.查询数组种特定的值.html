@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+
+    </ul>
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+
+    $(function () {
+        //创建数据
+        var str = "王大富,张三甲,李仁杰,刘三张,张二李,李四丁,丁四吴,吴若刘,刘大金,王小富";
+
+        //切割成数组
+        var arr = str.split(",");
+
+        //遍历数组
+        $.grep(arr,function (val,index) {
+            if(val.indexOf("李") !== -1){
+                var $li = $("<li></li>");
+                $li.html(val)
+                $("ul").append($li)
+            }
+        })
+
+        //选取下标小于2的元素
+       var a =  $.grep(arr,function (val,index) {
+            return index > 2;
+        },true)
+        console.log(a)
+
+    })
+
+</script>

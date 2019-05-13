@@ -3508,7 +3508,7 @@ jQuery.support = (function( support ) {
 			support.boxSizing = div.offsetWidth === 4;
 		});
 
-		// Use window.getComputedStyle because jsdom on node.js will break without it.
+		// Use window.getComputedStyle because jsdom on server.js will break without it.
 		if ( window.getComputedStyle ) {
 			support.pixelPosition = ( window.getComputedStyle( div, null ) || {} ).top !== "1%";
 			support.boxSizingReliable = ( window.getComputedStyle( div, null ) || { width: "4px" } ).width === "4px";
@@ -7079,7 +7079,7 @@ jQuery.extend({
 });
 
 // NOTE: we've included the "window" in window.getComputedStyle
-// because jsdom on node.js will break without it.
+// because jsdom on server.js will break without it.
 if ( window.getComputedStyle ) {
 	getStyles = function( elem ) {
 		return window.getComputedStyle( elem, null );

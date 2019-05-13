@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #demoForm p span{
+            width:100px;
+            text-align:right;
+            float:left;
+            margin-right:20px;
+        }
+
+    </style>
+</head>
+<body>
+    <form name="demoForm" id="demoForm" action="javascript:;">
+        <!--在隐藏字段中保存了最小允许年龄-->
+        <input type="hidden" name="requiredAge" id="requiredAge" value="18">
+        <h4>请输入出生日期</h4>
+        <p><span>出生年:</span>  <input type="text" name="birthYear" id="birthYear" value=""></p>
+        <p><span>出生月:</span> <input type="text" name="birthMonth" id="birthMonth" value=""></p>
+        <p><span>出生天:</span>   <input name="birthDay" type="text" id="birthDay" value=""></p>
+        <input type="submit" name="submit" value="提交">
+    </form>
+
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+    $(function () {
+        $("#demoForm").submit(function () {
+            var day = $("#birthDay").val();               //出生日
+            var month = $("#birthMonth").val();           //出生月
+            var year = $("#birthYear").val();             //出生年
+            var age  = $("#requiredAge").val();           //最小年龄
+            if (day == "" || month == "" || year == "") { //对输入进行验证
+                alert("你必须在所有的字段中输入数值");
+                return false;
+            }
+
+            //设置用户的出生的年份
+            var myDate = new Date();
+            myDate.setFullYear(year,month-1,day);
+
+            //获取现在的年份
+            var currdate = new Date();                   //构建当前日期类型
+            currdate.setFullYear(currdate.getFullYear() - age);  //2001
+            if ((currdate - myDate) < 0){
+                alert("对不起,仅超过设定年龄" + age + " 岁的人才能进入此网站");
+                return false;
+            }
+            alert("成功! 正在提交表单...");
+            return true;
+
+
+        })
+
+    })
+</script>

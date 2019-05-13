@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script>
+
+        //获取页面一开始加载的时间
+        var startTime = new Date().getTime();
+
+        window.onload = function () {
+            var endTime = new Date().getTime();
+            var time = (endTime -startTime)/1000 ;
+            //将结果放到div中
+            $('#load_time').text('页面的加载时间为:  ' + time + '秒');
+
+        }
+
+    </script>
+</head>
+<body>
+<!--调用iframe加载一个外部网站-->
+<iframe src="https://github.com/" id="tag" name="tag"
+        allowTransparency="true" width="800"
+        height="200" scrolling="no" frameborder="0">
+</iframe>
+<!--显示结果加载时间-->
+<div id="load_time"></div>
+
+</body>
+</html>

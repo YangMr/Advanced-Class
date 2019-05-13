@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+
+    $(function () {
+        //1.创建数据
+        var str = "王大富,张三甲,李仁杰,刘三张,张二李,李四丁,丁四吴,吴若刘,刘大金,王小富";
+        //2.转化为数组
+        var arr = str.split(",");
+        //创建一个数组,用来保存要删除的数据
+        var idx = [];
+
+        //遍历数据
+        $.grep(arr,function (val,index) {
+            if(val.indexOf("李")!== -1){
+                idx.push(val)
+            }
+        });
+
+        //遍历要删除的数据,进行删除
+        $.each(idx,function (index,element) {
+           arr.splice($.inArray(element,arr),1);
+        })
+
+       //再删除张三甲
+        arr.splice($.inArray("张三甲",arr),1)
+
+        console.log(arr)
+    })
+
+</script>

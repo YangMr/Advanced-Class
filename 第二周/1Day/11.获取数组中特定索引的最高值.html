@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="result"></div>
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+
+    $(function () {
+        var data = Array();                                   //构建一个数组
+        data[0] = {"苹果":1, "桃子":2, "桔子":3};
+        data[1] = {"苹果":3, "桃子":3, "桔子":5};
+        data[2] = {"苹果":4, "桃子":1, "桔子":10};
+
+        function getHighestVal(data, index){
+            var max=-1;                                   //保存返回值的全局变量
+            $.each(data, function (i,v){
+
+                thisVal = v[index];                       //得到特定索引的值
+
+
+                max = (max < thisVal) ? thisVal : max;    //比较并将最大值赋给max
+                                         //将max作为最大值返回给调用端
+            });
+            return max;
+        }
+
+        var a = getHighestVal(data,"桔子")
+        $("#result").append("桔子的最大个数是："+a); //输出结果值
+
+    })
+
+</script>

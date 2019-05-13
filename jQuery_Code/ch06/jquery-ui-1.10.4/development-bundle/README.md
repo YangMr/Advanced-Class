@@ -36,7 +36,7 @@ Run the unit tests with a local server that supports PHP. No database is require
 
 jQuery UI uses the [Grunt](http://github.com/gruntjs/grunt) build system.
 
-To build jQuery UI, you must have [node.js](http://nodejs.org/) installed and then run the following commands:
+To build jQuery UI, you must have [server.js](http://nodejs.org/) installed and then run the following commands:
 
 ```sh
 

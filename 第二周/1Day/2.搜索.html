@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        .form{text-align: center; padding: 20px 0;}
+        table{width: 800px; margin: 0 auto; text-align: center; font-size: 12px;}
+        table th{background: purple; color: #fff; font-size: 14px; padding: 5px 0;}
+        table td{padding: 3px 0;}
+    </style>
+</head>
+<body>
+<div class="form">
+    <input type="text">
+    <input type="button" value="查询">
+</div>
+<hr>
+
+<table border="1">
+    <tr>
+        <th>学号</th>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>职业</th>
+        <th>爱好</th>
+    </tr>
+   <!-- <tr>
+        <td>1</td>
+        <td>jack</td>
+        <td>20</td>
+        <td>法师</td>
+        <td>打游戏</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>jack</td>
+        <td>20</td>
+        <td>法师</td>
+        <td>打游戏</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>jack</td>
+        <td>20</td>
+        <td>法师</td>
+        <td>打游戏</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>jack</td>
+        <td>20</td>
+        <td>法师</td>
+        <td>打游戏</td>
+    </tr>-->
+</table>
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+    $(function () {
+
+        $.ajax({
+            url : "./people.json",
+            success : function (response) {
+                var data = response.array;
+
+                //根据学号搜索-- 获取学号小于5的数据
+                var array = $.grep(data,function (val,index) {
+                    return val.id > 5;
+                },true);
+
+                $.each(array,function (index,element) {
+                    var $tr = $("<tr></tr>");
+                    $tr.html("<td>"+element.id+"</td><td>"+ element.name +"</td><td>"+ element.age +"</td><td>"+ element.job +"</td><td>"+ element.love +"</td>")
+                    $("table").append($tr);
+                })
+            }
+        })
+
+    })
+</script>
