@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <button id="btn">login</button>
+</body>
+</html>
+<script src="Bmob-1.7.0.min.js"></script>
+<script>
+    //初始化
+    Bmob.initialize("a6e04ef5db5cdb1c456cafb0d65f1f9d", "ced84030eb39c88283a016228c094206");
+
+    btn.onclick = function () {
+        const query = Bmob.Query('skin');
+        query.get('fd8f4a5fb5').then(res => {
+            console.log(res)
+        }).catch(err => {
+            console.log(err)
+        })
+    }
+</script>

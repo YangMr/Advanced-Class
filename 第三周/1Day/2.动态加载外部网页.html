@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="btn">load file</button>
+
+    <div id="logsContent"></div>
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+
+    $(function () {
+        $("#btn").click(function () {
+            $("#logsContent").load("logs.txt",function (response,status) {
+               if(status == "success") console.log("success");
+               if(status == "error") console.log("您请求的资源法伤错误")
+            })
+        })
+    })
+
+</script>

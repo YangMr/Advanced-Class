@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img.i{display: none;}
+    </style>
+</head>
+<body>
+
+<img class="i" src="img/loaderc.gif" alt="" >
+    <button id="btn">ajax</button>
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+
+    $(function () {
+        $("#btn").click(function () {
+            $.ajax({
+                url : "8_14.php",
+                success : function (response) {
+                    $("body").append(response)
+                }
+            });
+
+
+        })
+
+        $(document).ajaxStart(function () {
+            $("img.i").fadeIn()
+        })
+        $(document).ajaxStop(function () {
+            $("img.i").fadeOut()
+        })
+    })
+
+</script>

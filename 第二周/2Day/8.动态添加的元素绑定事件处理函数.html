@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h2 id="h2-caption">超实用的jQuery代码段 - jQuery如何为动态添加的元素绑定事件处理函数</h2>
+    <hr><br>
+    <button>为动态添加的元素绑定事件处理函数</button>
+    <p>Click me to create new paragraph!</p>
+    <br><hr>
+    <div id="div-log">
+        <p>日志记录：</p>
+    </div>
+
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+
+    $(function () {
+        $("button").click(function () {
+            $("p").on("click",function () {
+                $(this).after("<p>hello</p>")
+            })
+        })
+    })
+
+</script>

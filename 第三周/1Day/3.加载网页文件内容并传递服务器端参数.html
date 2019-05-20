@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>加载服务器端的参数描述</h2>
+    <label for="parameters"></label>
+    <select name="parameters" size="5" id="parameters">
+        <option value="1" selected="selected">url</option>
+        <option value="2">data</option>
+        <option value="3">callback</option>
+    </select>
+    <br/>
+    <button id="btn1" type="button">获取参数描述</button>
+    <!--用来放置服务器端文件的div元素-->
+    <div id="logscontent"></div>
+
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+
+    $(function () {
+        $("#btn1").click(function () {
+            var $name = $("#parameters option:selected").val();
+
+            $("#logscontent").load("http://localhost/webCourse/JavaScript/test/loadWithParameters_server.php",{name : $name},function (response,status) {
+                if(status == "success") console.log(response);
+                if(status == "error") console.log("error")
+            })
+        })
+    })
+
+</script>

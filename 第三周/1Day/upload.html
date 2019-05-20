@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{width: 300px; height: 300px; border: 1px solid #ccc; display: none;}
+    </style>
+</head>
+<body>
+<form action="#" method="get" id="upload">
+    <input type="file" name="pic" multiple="multiple" >
+    <input type="button" id="btn" value="pic">
+    <input type="submit">
+</form>
+
+<div>
+
+</div>
+
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+
+    $("input[type='file']").change(function (e) {
+        console.log(e.currentTarget.files[0].name)
+        $.ajax({
+            url : "demo.php",
+            data : {
+                pic : e.currentTarget.files[0].name
+            },
+            success : function (response) {
+                $("div").fadeIn();
+                console.log(response)
+                var img = $("<img>");
+                img.attr("src",response);
+                $("div").append(img)
+            }
+        })
+    })
+
+   /* $("#btn").click(function () {
+        console.log($("input").eq(0).val())
+        /!*$.ajax({
+            url : "demo.php",
+            data : {
+                pic : $("input").eq(0).val()
+            },
+            success : function (response) {
+                $("div").fadeIn();
+                console.log(response)
+            }
+        })*!/
+    })*/
+
+
+</script>

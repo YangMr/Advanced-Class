@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="images/googlelogo_1.jpg" width="486" height="134" alt="Google公司" longdesc="http://www.google.com" />
+
+</body>
+</html>
+<script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+<script>
+    $(function () {
+        $("img").error(function () {
+            $("img").replaceWith("<p><b>图片未加载！</b></p>");
+        })
+    })
+</script>

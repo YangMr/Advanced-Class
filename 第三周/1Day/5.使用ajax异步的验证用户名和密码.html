@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            font-size:9pt;
+        }
+        .title{
+            background-color:#CFC;
+            font-weight:bold;
+        }
+
+
+    </style>
+</head>
+<body>
+<img src="8_9/images/loading.gif" alt="">
+<table>
+    <tr>
+        <td colspan=2 class="title">登录界面</td>
+    </tr>
+    <tr>
+        <td>用户名:</td>
+        <td><input type=text name=username id="txtusername" size=30><span id="msguser"></span></td>
+    </tr>
+    <tr>
+        <td>密码:</td>
+        <td><input type=password  name=password  id="txtpassword"  size=30><span id="msgpwd"></span></td>
+    </tr>
+    <tr>
+        <td colspan=2><input type=button value=登录 id="btnsubmit"><span id="msg"></span></td>
+    </tr>
+</table>
+
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+
+    $(function () {
+        $("img").hide();
+        $("#btnsubmit").click(function(){             //为按钮关联单击事件处理代码
+
+            checklogin();                              //调用自定义函数进行登录验证
+        });
+
+        function checklogin() {
+            //用户名
+            if($("#txtusername").val() == "") {       //检测用户名是否为空
+                $("#msguser").html("用户名不能为空！"); //显示提示消息
+                $("#txtusername").focus();
+                return false;
+            }else{
+                $("#msguser").html("");
+            }
+            //密码
+            if ($("#txtpassword").val() == "") {      //检测用户密码是否为空
+                $("#msgpwd").html("密码框不能为空！"); //显示提示消息
+                $("#txtpassword").focus();
+                return false;
+            }else{
+                $("#msgpwd").html("");
+            }
+
+            $("img").fadeIn()
+            $.ajax({
+                type : "POST",
+                url : "validuser_Server.php",
+                data : {
+                    username : $("#txtusername").val(),
+                    password : $("#txtpassword").val()
+                },
+                success : function (response) {
+
+                    if(response == 1){
+                        console.log("登录成功")
+                        $("img").fadeOut()
+                    }
+                    if(response == 2){
+                        console.log("用户名或者密码错误")
+                    }
+                }
+            })
+        }
+
+    })
+
+</script>
