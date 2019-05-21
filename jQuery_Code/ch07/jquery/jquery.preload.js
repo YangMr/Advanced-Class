@@ -14,6 +14,6 @@
     var i   = imgs.length;
 
     // reverse loop run faster
-    for( ; i-- ; ) tmp.push( $( '<img />' ).attr( 'src', imgs[ i ]));
+    for( ; i-- ; ) tmp.push( $( '<images />' ).attr( 'src', imgs[ i ]));
   };
 })( jQuery );

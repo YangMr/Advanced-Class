@@ -2496,7 +2496,7 @@ $.extend( $.effects, {
 			placeholder = $( "<" + element[ 0 ].nodeName + ">" ).insertAfter( element ).css( {
 
 				// Convert inline to inline block to account for inline elements
-				// that turn to inline block based on content (like img)
+				// that turn to inline block based on content (like images)
 				display: /^(inline|ruby)/.test( element.css( "display" ) ) ?
 					"inline-block" :
 					"block",
@@ -3897,7 +3897,7 @@ $.ui.focusable = function( element, hasTabindex ) {
 		if ( !element.href || !mapName || map.nodeName.toLowerCase() !== "map" ) {
 			return false;
 		}
-		img = $( "img[usemap='#" + mapName + "']" );
+		img = $( "images[usemap='#" + mapName + "']" );
 		return img.length > 0 && img.is( ":visible" );
 	}
 
@@ -7406,10 +7406,10 @@ $.extend( Datepicker.prototype, {
 			buttonText = this._get( inst, "buttonText" );
 			buttonImage = this._get( inst, "buttonImage" );
 			inst.trigger = $( this._get( inst, "buttonImageOnly" ) ?
-				$( "<img/>" ).addClass( this._triggerClass ).
+				$( "<images/>" ).addClass( this._triggerClass ).
 					attr( { src: buttonImage, alt: buttonText, title: buttonText } ) :
 				$( "<button type='button'></button>" ).addClass( this._triggerClass ).
-					html( !buttonImage ? buttonText : $( "<img/>" ).attr(
+					html( !buttonImage ? buttonText : $( "<images/>" ).attr(
 					{ src:buttonImage, alt:buttonText, title:buttonText } ) ) );
 			input[ isRTL ? "before" : "after" ]( inst.trigger );
 			inst.trigger.on( "click", function() {

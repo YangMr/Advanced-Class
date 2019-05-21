@@ -41,7 +41,7 @@ $.imgZoom = function (img, options) {
 
         endOpacity,
 
-        $bigImg = $("<img/>"),
+        $bigImg = $("<images/>"),
 
         $wrap,
 
@@ -65,7 +65,7 @@ $.imgZoom = function (img, options) {
 
         endOpacity = $.isArray(options.opacity) ? options.opacity[1] : 1;
 
-        $("<img/>").attr("src", options.loadingImg);
+        $("<images/>").attr("src", options.loadingImg);
         Z.$loading.css({
             backgroundImage: "url(" + options.loadingImg + ")",
             backgroundPosition: "center",

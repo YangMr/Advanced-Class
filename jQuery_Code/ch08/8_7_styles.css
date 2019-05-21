@@ -7,7 +7,7 @@ body{
 	font-size:13px;
 	color:#eee;
 	font-family:Arial, Helvetica, sans-serif;
-	/*background:url('img/bg.jpg') repeat-x #718693;*/
+	/*background:url('images/bg.jpg') repeat-x #718693;*/
 }
 
 #page{
@@ -51,11 +51,11 @@ fieldset{
 
 #s{
 	/* The search text box. */
-	
+
 	border:none;
 	color:#888888;
 	background:url("img/searchBox.png") no-repeat;
-	
+
 	float:left;
 	font-family:Arial,Helvetica,sans-serif;
 	font-size:15px;
@@ -106,7 +106,7 @@ li.videos:hover{ background-position:right bottom;}
 
 span.arrow{
 	/* The little arrow that moves below the icons */
-	
+
 	width:11px;
 	height:6px;
 	margin:21px 0 0 5px;
@@ -169,9 +169,9 @@ input[type=radio]{
 	/* Holds each page with search results. Has an inset bottom border. */
 	border-bottom:1px solid #5e7481;
 	margin-bottom:50px;
-	
+
 	/* Adding a dark bottom border with box shadow */
-	
+
 	-moz-box-shadow:0 1px 0 #798e9c;
 	-webkit-box-shadow:0 1px 0 #798e9c;
 	box-shadow:0 1px 0 #798e9c;
@@ -188,12 +188,12 @@ p.notFound{
 
 
 .webResult{ text-shadow:1px 1px 0 #586a75;margin-bottom:50px;}
-.webResult h2{ 
+.webResult h2{
 	background-color:#5D6F7B;
 	font-size:18px;
 	font-weight:normal;
 	padding:8px 20px;
-	
+
 	/* Applying CSS3 rounded corners */
 	-moz-border-radius:18px;
 	-webkit-border-radius:18px;

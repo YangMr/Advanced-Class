@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <p>{{title}}</p>
+        <p>{{name}}</p>
+        <p>{{age}}</p>
+        <p>{{flag}}</p>
+        <p>{{love}}</p>
+        <p>{{arr[0]}}</p>
+        <p>{{obj.name}}</p>
+        <p>{{obj.age[0]}}</p>
+    </div>
+
+</body>
+</html>
+<script>
+
+    new Vue({
+        el : "#app",
+        data : {
+            title : "hello vue.js",
+            name : "jack",
+            age : 20,
+            flag : true,
+            love : null,
+            arr : ["张三","李四","王五","马六"],
+            obj : {
+                name : "rose",
+                age : [20,31,21]
+            }
+        }
+    })
+
+</script>

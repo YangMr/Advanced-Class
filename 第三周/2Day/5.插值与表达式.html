@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{date}}</p>
+    </div>
+</body>
+</html>
+<script>
+
+    new Vue({
+        el : "#app",
+        data : {
+            date : new Date(),
+            timer : null
+        },
+        //将元素挂载vue实例上
+        mounted(){
+            var _this = this;
+            this.timer = setInterval(function () {
+                _this.date = new Date();
+            },1000)
+        },
+        //实例销毁之前调用
+        beforeDestroy(){
+            clearInterval(this.timer)
+        }
+    })
+
+</script>

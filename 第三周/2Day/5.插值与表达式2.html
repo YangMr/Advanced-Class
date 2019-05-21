@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p> 100 / 10 = {{number / 10}}</p>
+        <p>您想学习吗? {{isOk ? "想学习" : "不想学习"}}</p>
+        <p>{{text.split(",").join("")}}</p>
+        <p>{{new Date()}}</p>
+        <p>{{Math.random()}}</p>
+    </div>
+</body>
+</html>
+<script>
+
+    new Vue({
+        el : "#app",
+        data : {
+            number : 100,
+            isOk : false,
+            text : "123,234"
+        }
+
+    })
+
+</script>

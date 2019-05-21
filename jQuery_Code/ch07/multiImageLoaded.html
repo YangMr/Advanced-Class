@@ -42,15 +42,15 @@ ul {
 <script type="text/javascript" src="jquery/jquery-1.9.1.js"></script>
 <!--
 <script type="text/javascript">
-  $(document).ready(function(){	
-	$('img').load(function(){
-		 alert('img loaded')   //该代码在每一张图片加载完成时都会执行一次
+  $(document).ready(function(){
+	$('images').load(function(){
+		 alert('images loaded')   //该代码在每一张图片加载完成时都会执行一次
 	})
   });
 </script>
 -->
 <script type="text/javascript">
- $(document).ready(function(){	
+ $(document).ready(function(){
 	var imgNum=$('img').length;                   //要加载的图片张数
 	$('img').load(function(){
 		if(!--imgNum)
@@ -73,7 +73,7 @@ ul {
     <li class="zoom"><img src="images/sample2.jpg"/></li>
     <li class="zoom"><img src="images/sample3.jpg"/></li>
     <li class="zoom"><img src="images/sample5.jpg"/></li>
-</ul>		
+</ul>
 </div>
 </body>
 </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="name" placeholder="你的名字">
+        <h1>您好,{{name}}</h1>
+    </div>
+</body>
+</html>
+<script>
+    var obj = {
+        name : "hello"
+    };
+   var app = new Vue({
+        el : "#app",
+        data : obj
+    });
+
+   console.log(app.name)
+
+    app.name = "world";
+    console.log(app.name)
+
+    obj.name = "123";
+    console.log(app.name)
+</script>

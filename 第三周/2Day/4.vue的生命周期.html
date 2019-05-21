@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{name}}</p>
+    </div>
+</body>
+</html>
+<script>
+
+    new Vue({
+        el : "#app",
+        data : {
+            name : "Vue.js"
+        },
+        //实例创建完成之后调用
+        created(){
+            this.name = "1"
+            console.log(this.name)
+        },
+        //挂载道元素上时触发
+        mounted(){
+            console.log(this.name)
+        }
+    })
+
+</script>
