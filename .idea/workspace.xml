@@ -2,32 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aeb24252-aef0-4727-a907-1262a318aeef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/第三周/3Day/1.过滤器.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第三周/3Day/1.过滤器2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第三周/3Day/2.v-show.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第三周/3Day/3.v-on.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第三周/3Day/4.计算属性.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第三周/3Day/4.计算属性2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第三周/3Day/4.计算属性3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第三周/3Day/4.计算属性4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第三周/3Day/4.计算属性5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第三周/3Day/4.语法糖.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第三周/3Day/5.计算属性缓存.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第三周/3Day/5.计算属性缓存2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第三周/3Day/5.计算属性缓存3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第三周/3Day/5.计算属性缓存4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第三周/3Day/6.class.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第三周/3Day/6.class2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第三周/3Day/6.class3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第三周/3Day/6.class4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第三周/3Day/6.class5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第三周/3Day/6.class6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第三周/3Day/6.class7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第三周/3Day/7.class数组语法.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第三周/3Day/7.class数组语法2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/第三周/3Day/7.class数组语法3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/第三周/2Day/v-show2.html" beforeDir="false" afterPath="$PROJECT_DIR$/第三周/2Day/v-show2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第三周/3Day/作业/Finished/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第三周/3Day/作业/Finished/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第三周/3Day/作业/Finished/css/foundation.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第三周/3Day/作业/Finished/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第三周/3Day/作业/Finished/vue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第三周/3Day/作业/留言板/bootstrap/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第三周/3Day/作业/留言板/bootstrap/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第三周/3Day/作业/留言板/bootstrap/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第三周/3Day/作业/留言板/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第三周/3Day/作业/留言板/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/第三周/3Day/作业/留言板/js/vue.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -42,98 +27,7 @@
     <favorites_list name="Advanced-Class" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/第三周/3Day/6.class.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/第三周/3Day/6.class2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="28" column="6" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/第三周/3Day/6.class3.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/第三周/3Day/6.class4.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="41" column="16" lean-forward="true" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/第三周/3Day/6.class5.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/第三周/3Day/6.class6.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/第三周/3Day/6.class7.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/第三周/3Day/7.class数组语法.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-87">
-              <caret line="26" column="48" lean-forward="true" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/第三周/3Day/7.class数组语法2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="40" column="20" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/第三周/3Day/7.class数组语法3.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="39" column="24" lean-forward="true" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -214,7 +108,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="15" />
     <option name="y" value="56" />
     <option name="width" value="1346" />
@@ -246,6 +140,13 @@
               <item name="第三周" type="462c0819:PsiDirectoryNode" />
               <item name="3Day" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Advanced-Class" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Advanced-Class" type="462c0819:PsiDirectoryNode" />
+              <item name="第三周" type="462c0819:PsiDirectoryNode" />
+              <item name="3Day" type="462c0819:PsiDirectoryNode" />
+              <item name="作业" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -264,11 +165,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\承乾灵殊\Desktop\Advanced-Class\第三周\3Day\作业" />
       <recent name="C:\Users\承乾灵殊\Desktop\Advanced-Class\第三周\3Day" />
       <recent name="C:\Users\承乾灵殊\Desktop\Advanced-Class\第三周\2Day" />
       <recent name="C:\Users\承乾灵殊\Desktop\Advanced-Class\第三周\2Day\js" />
       <recent name="C:\Users\承乾灵殊\Desktop\Advanced-Class\第三周\2Day\css" />
-      <recent name="C:\Users\承乾灵殊\Desktop\Advanced-Class\第三周\2Day\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\承乾灵殊\Desktop\Advanced-Class\第一周\1Day" />
@@ -309,16 +210,15 @@
       <workItem from="1558327779823" duration="110000" />
       <workItem from="1558339928806" duration="65000" />
       <workItem from="1558401479702" duration="17773000" />
-      <workItem from="1558487444750" duration="12807000" />
+      <workItem from="1558487444750" duration="13236000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119082000" />
+    <option name="totallyTimeSpent" value="119511000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49840257" visible="true" weight="0.13392857" />
       <window_info id="Structure" order="1" sideWeight="0.50159746" side_tool="true" weight="0.1376488" />
@@ -359,9 +259,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/第三周/2Day/js/jquery-1.8.3.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/第三周/2Day/js/Bmob-1.7.0.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -601,34 +498,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三周/3Day/5.计算属性缓存2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="24" column="14" selection-start-line="22" selection-start-column="12" selection-end-line="24" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第三周/3Day/5.计算属性缓存.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第三周/3Day/5.计算属性缓存3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第三周/3Day/5.计算属性缓存4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="24" column="9" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="24" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/第三周/3Day/4.计算属性.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -636,10 +505,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三周/3Day/6.class2.html">
+    <entry file="file://$PROJECT_DIR$/第三周/3Day/7.class数组语法2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="28" column="6" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+        <state relative-caret-position="408">
+          <caret line="40" column="20" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第三周/3Day/7.class数组语法3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="39" column="24" lean-forward="true" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -647,6 +523,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第三周/3Day/6.class2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="28" column="6" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -678,33 +561,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/第三周/3Day/7.class数组语法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-87">
-          <caret line="26" column="48" lean-forward="true" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第三周/3Day/7.class数组语法2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="40" column="20" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/第三周/3Day/7.class数组语法3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="39" column="24" lean-forward="true" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/第三周/3Day/6.class7.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第三周/3Day/7.class数组语法.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="26" column="48" lean-forward="true" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第三周/3Day/5.计算属性缓存.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第三周/3Day/5.计算属性缓存2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="24" column="14" selection-start-line="22" selection-start-column="12" selection-end-line="24" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第三周/3Day/5.计算属性缓存3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第三周/3Day/5.计算属性缓存4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="24" column="9" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="24" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第三周/3Day/作业/Finished/css/app.css">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
