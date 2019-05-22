@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button @click="jian" :disabled="flag">-</button>
+        <input type="text" v-model="package1[0].count">
+        <button @click="package1[0].count++">+</button>
+        <p>总价: {{ prices }}</p>
+    </div>
+</body>
+</html>
+<script>
+
+    var app = new Vue({
+        el : "#app",
+        data : {
+            flag : false,
+            package1 : [
+                {
+                    name : "iphone7",
+                    price : 7199,
+                    count : 2
+                },
+                {
+                    name : "iPad",
+                    price : 2888,
+                    count : 1
+                }
+            ],
+            package2 : [
+                {
+                    name : "apple",
+                    price : 3,
+                    count : 5
+                },
+                {
+                    name : "banana",
+                    price : 2,
+                    count : 10
+                }
+            ]
+        },
+        computed : {
+            prices : function () {
+                var price = 0;
+                //得到package1的总价
+                for(var i=0;i<this.package1.length;i++){
+                    price += this.package1[i].price * this.package1[i].count
+                }
+                //得到package2的总价
+                for(var i=0;i<this.package2.length;i++){
+                    price += this.package2[i].price * this.package2[i].count
+                }
+                return price;
+            }
+        },
+        methods : {
+            jian : function () {
+                this.package1[0].count--;
+                if( this.package1[0].count <= 0){
+                    this.flag = true
+                }
+            }
+        }
+    })
+
+</script>

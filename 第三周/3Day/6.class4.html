@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <style>
+        .box{
+            color: purple;
+        }
+        .active{
+            padding: 5px;
+            border:1px solid #f60;
+            text-align: center;
+        }
+        .error{
+            padding: 5px;
+            border:1px solid yellow;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <button @click="changeColor">addClass</button>
+        <p class="box" :class="{active : isActive, error : isError}">{{text}}</p>
+    </div>
+</body>
+</html>
+<script>
+
+    var app = new Vue({
+        el : "#app",
+        data : {
+            text : "Hello World Vue.js",
+            isActive : true,
+            isError : false
+        },
+        methods : {
+            changeColor : function () {
+                this.isActive = false;
+                this.isError = true;
+            }
+        }
+    })
+
+</script>

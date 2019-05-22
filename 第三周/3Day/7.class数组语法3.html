@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <style>
+        .btn{
+            padding: 10px 20px;
+            display: block;
+            margin: 30px auto;
+        }
+        .btn-large{
+            border:none;
+            background: purple;
+        }
+        .btn-disabled{
+           color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <button @click="isActive = !isActive">addClass</button>
+        <button :class="classes">class</button>
+    </div>
+</body>
+</html>
+<script>
+
+    var app = new Vue({
+        el : "#app",
+        data : {
+            text : "Hello World Vue.js",
+            size : "large",
+            disabled : true
+        },
+        computed : {
+            classes : function () {
+                return [
+                    "btn",
+                    {
+                       ["btn-"+this.size] : this.size != "",
+                       ["btn-disabled"] : this.disabled
+                    }
+                ]
+            }
+        }
+    })
+
+</script>

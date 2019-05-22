@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button @click="change">changeName</button>
+        <p>姓名: {{ fullName }}</p>
+    </div>
+</body>
+</html>
+<script>
+
+    var app = new Vue({
+        el : "#app",
+        data : {
+           firstName : "jack",
+           lastName : "rose"
+        },
+        computed : {
+          fullName : {
+              get : function () {
+                  return this.firstName + " " + this.lastName
+              },
+              set : function (newValue) {
+                  console.log(newValue)
+                  var names = newValue.split(" ").reverse();
+                  this.firstName = names[0];
+                  this.lastName = names[1]
+              }
+          }
+        },
+        methods : {
+            change : function () {
+                this.fullName = "张三 李四"
+            }
+        }
+    })
+
+    // app.fullName = "张三 李四"
+</script>

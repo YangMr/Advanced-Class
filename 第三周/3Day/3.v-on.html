@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="show">button</button>
+        <p v-if="flag">{{text}}</p>
+    </div>
+</body>
+</html>
+<script>
+
+    var app = new Vue({
+        el : "#app",
+        data : {
+            text : "我想好好学习Vue",
+            flag : true
+        },
+        methods : {
+            show : function () {
+                this.text = "hello world";
+                this.hide()
+            },
+            hide : function () {
+                this.flag = false;
+            }
+        }
+    })
+
+
+</script>

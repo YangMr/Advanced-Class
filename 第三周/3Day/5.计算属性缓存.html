@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{reservedText}}</p>
+    </div>
+</body>
+</html>
+<script>
+
+    var app = new Vue({
+        el : "#app",
+        data : {
+            text : "123,456"
+        },
+        computed : {
+            reservedText : function () {
+                return this.text.split(",").reverse().join("-");
+            }
+        }
+    })
+
+</script>

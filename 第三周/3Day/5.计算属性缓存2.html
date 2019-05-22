@@ -4,29 +4,27 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
-    <style>
-
-        #box{width: 150px; height: 150px; background: red; margin: 100px auto;}
-
-    </style>
 </head>
 <body>
     <div id="app">
-        <button v-on:click="num=10">toggle</button>
-        <div id="box" v-show="flag"></div>
+        <button v-on:click="test">Clicks</button>
+        <p>{{reservedText()}}</p>
     </div>
 </body>
 </html>
 <script>
 
-    new Vue({
+    var app = new Vue({
         el : "#app",
         data : {
-          num : 1
+            text : "123,456"
         },
         methods : {
-            toggle : function () {
-                alert(this.num)
+            reservedText : function () {
+                return this.text.split(",").reverse().join("-");
+            },
+            test : function () {
+                this.text = "456,759"
             }
         }
     })

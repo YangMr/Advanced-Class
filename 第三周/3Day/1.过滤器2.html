@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button @click="test">Clicks</button>
+        <p>{{count | filterCount}}万</p>
+    </div>
+</body>
+</html>
+<script>
+
+
+
+    var app = new Vue({
+        el : "#app",
+        data : {
+            count : 96123
+        },
+        filters : {
+            filterCount : function (value) {
+                var num = Math.floor((value / 10000) * 10) / 10 ;
+                return num;
+            }
+        },
+        methods : {
+            test : function () {
+                this.count = 97000;
+                console.log(this.count)
+            }
+        }
+    })
+
+</script>

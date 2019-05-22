@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <style>
+        .active{
+            padding: 5px;
+            border:1px solid #f60;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <button @click="flag = !flag">addClass</button>
+        <p :class="{active : flag}">{{text}}</p>
+    </div>
+</body>
+</html>
+<script>
+
+    var app = new Vue({
+        el : "#app",
+        data : {
+            text : "Hello World Vue.js",
+            flag :true
+        }
+    })
+
+</script>

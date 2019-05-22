@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <style>
+        .box{
+            color: purple;
+        }
+        .active{
+            padding: 5px;
+            border:1px solid #f60;
+            text-align: center;
+        }
+        .error{
+           /* padding: 5px;
+            border:1px solid yellow;
+            text-align: center;*/
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <button @click="isActive = !isActive">addClass</button>
+        <p class="box" :class="classArray">{{text}}</p>
+    </div>
+</body>
+</html>
+<script>
+
+    var app = new Vue({
+        el : "#app",
+        data : {
+            text : "Hello World Vue.js",
+            a : "active",
+            b : "error",
+            isActive :true
+        },
+        computed : {
+            classArray : function () {
+                return [
+                    {"active" : this.isActive},
+                    this.b
+                ]
+            }
+        }
+    })
+
+</script>
