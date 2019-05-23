@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+     <!--   <p v-bind:style="{color:color,background: bg}">hello</p>-->
+        <p :style="[aa,bb]">hello</p>
+    </div>
+</body>
+</html>
+<script>
+
+    new Vue({
+        el : "#app",
+        data : {
+            color : "red",
+            bg : "yellow",
+            size : "25px",
+            aa : {color:"yellow",background: "red",fontSize:"30px"},
+            bb : {height:"300px",width:"300px"}
+        }
+    })
+
+</script>
+

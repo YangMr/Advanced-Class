@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <style>
+        html,body,table,tr,th,td,a,ul,p,ol,li,h1,h2,h3,form,input,button{margin: 0; padding: 0;}
+        ul,ol{list-style-type: none;}
+       /* .clearfix:after{content: ""; visibility: hidden; display: block; width: 0; height: 0; clear: both;}
+        .clearfix{zomm : 1;}*/
+
+        .main{width: 900px; margin: 0 auto;}
+        .main h2{text-align: center; padding: 20px 0; border-bottom: 1px solid #ccc;}
+        .main form p{padding: 10px 0;}
+        .main form{padding: 20px 0; text-align: center;}
+        .main form label{color: #000; font-weight: bold; font-size: 14px;}
+        .main form p input{width: 450px; height: 30px; margin-left: 50px; padding-left: 20px; border-radius: 5px; border: 1px solid #ccc;}
+        .main form .button{text-align: center;padding: 20px 0;}
+        .main form .button input{border: 2px solid #ccc; border-radius: 8px; background: purple; color: #fff; padding: 10px 20px;}
+        .main .list h2{text-align: center; border-bottom: none; color: #0f92d6; font-weight: normal;}
+
+        .main table{ width: 100%; border-collapse: collapse; border-spacing: 0; border-color:#ccc;}
+        .main table th{padding:15px 0; color: #666; font-size: 14px;}
+        .main table td{padding: 10px 0; text-align: center; color: #777; font-family: 黑体;}
+        .main table .deletes{border:1px solid #f60; color: #fff; background: red; cursor: pointer; padding: 5px 15px; border-radius: 5px;}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h2>添加用户</h2>
+
+        <form action="">
+            <p>
+                <label for="user-name">姓名:</label>
+                <input type="text" id="user-name" placeholder="请输入姓名">
+            </p>
+            <p>
+                <label for="user-age">年龄:</label>
+                <input type="text" id="user-age" placeholder="请输入年龄">
+            </p>
+            <p>
+                <label for="user-email">邮箱:</label>
+                <input type="text" id="user-email" placeholder="请输入邮箱">
+            </p>
+            <div class="button">
+                <input type="button" value="添加">
+                <input type="reset" value="重置">
+            </div>
+        </form>
+
+        <hr/>
+
+        <div class="list">
+            <h2>用户列表</h2>
+
+            <table border="1">
+                <tr>
+                    <th>编号</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>邮箱</th>
+                    <th>操作</th>
+                </tr>
+                <tr v-for="(item,index) in userInfo">
+                    <td>{{index + 1}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.age}}</td>
+                    <td>{{item.email}}</td>
+                    <td>
+                        <button class="deletes">删除</button>
+                    </td>
+                </tr>
+                <!--<tr>
+                    <td>1</td>
+                    <td>张三</td>
+                    <td>20</td>
+                    <td>759168442@qq.com</td>
+                    <td>
+                        <button class="deletes">删除</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>张三</td>
+                    <td>20</td>
+                    <td>759168442@qq.com</td>
+                    <td>
+                        <button class="deletes">删除</button>
+                    </td>
+                </tr>-->
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+
+    new Vue({
+        el : ".main",
+        data : {
+            userInfo : [
+                {
+                    name : "张三",
+                    age : 20,
+                    email : "759168442@qq.com",
+                },
+                {
+                    name : "李四",
+                    age : 30,
+                    email : "311921823@qq.com",
+                }
+            ]
+        }
+    })
+
+</script>
