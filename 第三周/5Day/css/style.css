@@ -1,0 +1,21 @@
+[v-cloak]{
+    display: none;
+}
+table{
+    border: 1px solid #ccc;
+    width: 687px;
+    margin: 30px auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 14px;
+}
+table th,table td{
+    border: 1px solid #ccc;
+    padding:10px 0;
+}
+.totalPrice{
+    padding: 10px 0;
+    width: 687px;
+    margin: 0 auto;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <a href="https://www.baidu.com" @click="test('hello',$event)">百度一下</a>
+    </div>
+</body>
+</html>
+<script>
+
+   var app =  new Vue({
+       el : "#app",
+       data : {
+           counter : 0
+       },
+       methods : {
+           test : function (text,enevt) {
+               enevt.preventDefault()
+               alert(text)
+           }
+       }
+    })
+
+    /*app.books.push({name : "CSS",author : "hello"})
+
+    /!*Vue.set(app.books,2,{
+        name : "rose",
+        author : "123"
+    })*!/
+
+    app.books.splice(app.books,2,2,{
+        name : "759168442",
+        author : "yang"
+    })*/
+</script>

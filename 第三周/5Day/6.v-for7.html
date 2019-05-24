@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <template v-for="item in sortBooks">
+                <li>书名: <span>{{item.name}}</span></li>
+                <li>作者名: <span>{{item.author}}</span></li>
+                <hr>
+            </template>
+        </ul>
+
+        <button @click="add">addData</button>
+        <button @click="filter">filter data</button>
+    </div>
+</body>
+</html>
+<script>
+
+   var app =  new Vue({
+        el : "#app",
+        data : {
+            books : [
+                {
+                    name : "Vue.js实战",
+                    author : "梁灏"
+                },
+                {
+                    name : "JavaScript语言精粹",
+                    author : "Douglas Crockford"
+
+                },
+                {
+                    name : "JavaScript高级程序设计",
+                    author : "Nicholas C.Zakas"
+                }
+            ]
+        },
+        methods : {
+            add : function () {
+                this.books.push({name : "html",author : "深度"})
+            },
+            filter : function () {
+                this.books = this.books.filter(function (item,index) {
+                    return item.name.match(/JavaScript/);
+                    console.log(item.name.match(/JavaScript/))
+                })
+            }
+        },
+        computed : {
+            sortBooks : function () {
+                var aaa= this.books.sort(function (a,b){
+                    return a.name.length > b.name.length
+                })
+                console.log(aaa)
+                return aaa;
+
+            }
+        },
+        filters : {
+
+        }
+    })
+
+    /*app.books.push({name : "CSS",author : "hello"})
+
+    /!*Vue.set(app.books,2,{
+        name : "rose",
+        author : "123"
+    })*!/
+
+    app.books.splice(app.books,2,2,{
+        name : "759168442",
+        author : "yang"
+    })*/
+</script>

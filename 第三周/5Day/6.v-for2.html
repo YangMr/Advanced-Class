@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+           <li v-for="(item,key,index) in user">{{key}}-{{item}}-{{index}}</li>
+        </ul>
+    </div>
+</body>
+</html>
+<script>
+
+    new Vue({
+        el : "#app",
+        data : {
+           user : {
+               name : "jack",
+               age : 20,
+               love : "唱歌",
+               price:888
+           }
+        },
+        methods : {
+
+        },
+        computed : {
+
+        },
+        filters : {
+
+        }
+    })
+
+</script>

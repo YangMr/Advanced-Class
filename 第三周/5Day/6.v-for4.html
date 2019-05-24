@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <template v-for="item in books">
+                <li>书名: <span>{{item.name}}</span></li>
+                <li>作者名: <span>{{item.author}}</span></li>
+                <hr>
+            </template>
+        </ul>
+
+        <button @click="add">addData</button>
+    </div>
+</body>
+</html>
+<script>
+
+   var app =  new Vue({
+        el : "#app",
+        data : {
+            books : [
+                {
+                    name : "Vue.js实战",
+                    author : "梁灏"
+                },
+                {
+                    name : "JavaScript语言精粹",
+                    author : "Douglas Crockford"
+
+                },
+                {
+                    name : "JavaScript高级程序设计",
+                    author : "Nicholas C.Zakas"
+                }
+            ]
+        },
+        methods : {
+            add : function () {
+                this.books.push({name : "html",author : "深度"})
+            }
+        },
+        computed : {
+
+        },
+        filters : {
+
+        }
+    })
+
+    app.books.push({name : "CSS",author : "hello"})
+</script>

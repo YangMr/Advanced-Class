@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <style>
+        p{width: 150px; height: 150px; margin: 20px; background: red; text-align: center; line-height: 150px; float: left;}
+    </style>
+</head>
+<body>
+    <div id="app">
+
+        <button @click="status = 1">button</button>
+        <button @click="status = 2">button</button>
+        <button @click=" status = 3">button</button>
+
+        <p v-if="status == 1">我是第1个盒子</p>
+        <p v-else-if="status == 2">我是第2个盒子</p>
+        <p v-else>我是第3个盒子</p>
+
+    </div>
+</body>
+</html>
+<script>
+
+    new Vue({
+        el : "#app",
+        data : {
+            status : 1
+        },
+        methods : {
+
+        }
+    })
+
+
+
+</script>

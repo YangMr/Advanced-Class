@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1 v-once>{{message}}</h1>
+
+        <button @click="changeMessage">changeMessage</button>
+        <p>{{message}}</p>
+    </div>
+</body>
+</html>
+<script>
+
+    new Vue({
+        el : "#app",
+        data : {
+            message : "这是一段文本"
+        },
+        methods : {
+            changeMessage : function () {
+                this.message = "hello world"
+            }
+        }
+    })
+
+</script>

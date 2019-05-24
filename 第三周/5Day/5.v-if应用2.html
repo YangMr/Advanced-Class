@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        html,body,div,ul,li,a,img,input{margin: 0; padding: 0;}
+        #app{min-width: 320px; max-width: 640px; margin: 0 auto;}
+        #app .search{background: #04b1ff; padding: 10px;  text-align: center;}
+        #app .search input{width: 100%; text-indent: 10px; display: block; border-radius: 5px; border: 1px solid #04b1ff; height: 30px;}
+        #app .searchHistory{padding-top: 20px; }
+        #app .searchHistory img{width: 16px; height: 20px; float: right; vertical-align: middle; position: relative; top: -2px;}
+        #app .auto{list-style-type: none;}
+        #app .auto li{height: 30px; line-height: 30px; border-bottom: 1px dashed #ccc; padding-left: 20px;}
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!--搜索框-->
+        <div class="search">
+            <input type="text" v-model="searchText" @input="test" @keydown.enter="searchContent" placeholder="请输入书名或者小说名">
+        </div>
+        <!--搜索历史-->
+        <div class="searchHistory" v-if="flag">
+            <div class="title">历史纪录 <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNDk4MzY2NDg2NTEyIiBjbGFzcz0iaWNvbiIgc3R5bGU9IiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjI0MDEiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNDgiIGhlaWdodD0iNDgiPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTYxNC40IDc5Ny44NjdjLTE4Ljg3NiAwLTM0LjEzMy0xNS4yNTgtMzQuMTMzLTM0LjEzM3YtMzc1LjQ2N2MwLTE4Ljg3NiAxNS4yNTgtMzQuMTMzIDM0LjEzMy0zNC4xMzNzMzQuMTMzIDE1LjI1OCAzNC4xMzMgMzQuMTMzdjM3NS40NjdjMCAxOC44NzYtMTUuMjU4IDM0LjEzMy0zNC4xMzMgMzQuMTMzek00MDkuNiA3OTcuODY3Yy0xOC44NzYgMC0zNC4xMzMtMTUuMjU4LTM0LjEzMy0zNC4xMzN2LTM3NS40NjdjMC0xOC44NzYgMTUuMjU4LTM0LjEzMyAzNC4xMzMtMzQuMTMzczM0LjEzMyAxNS4yNTggMzQuMTMzIDM0LjEzM3YzNzUuNDY3YzAgMTguODc2LTE1LjI1OCAzNC4xMzMtMzQuMTMzIDM0LjEzM3pNOTU1LjczMyAyMTcuNmgtMTcwLjY2N3YtNjguMjY3YzAtNTYuNDU3LTQ1LjU2OC0xMDIuNC0xMDEuNjE1LTEwMi40aC0zNDIuMTE4Yy01Ni40NTcgMC0xMDIuNCA0NS45NDMtMTAyLjQgMTAyLjR2NjguMjY3aC0xNzAuNjY3Yy0xOC44NzYgMC0zNC4xMzMgMTUuMjU4LTM0LjEzMyAzNC4xMzNzMTUuMjU4IDM0LjEzMyAzNC4xMzMgMzQuMTMzaDg4Ny40NjdjMTguODc2IDAgMzQuMTMzLTE1LjI1OCAzNC4xMzMtMzQuMTMzcy0xNS4yNTgtMzQuMTMzLTM0LjEzMy0zNC4xMzN6TTMwNy4yIDE0OS4zMzNjMC0xOC44MDcgMTUuMzI2LTM0LjEzMyAzNC4xMzMtMzQuMTMzaDM0Mi4xMThjMTguNzA1IDAgMzMuMzQ4IDE0Ljk4NSAzMy4zNDggMzQuMTMzdjY4LjI2N2gtNDA5LjZ2LTY4LjI2N3pNNzUxLjA3MCAxMDAyLjY2N2gtNDc3LjkzNWMtNTYuNDU3IDAtMTAyLjQtNDUuOTQzLTEwMi40LTEwMi40di01MTIuNTEyYzAtMTguODQyIDE1LjI5Mi0zNC4xMzMgMzQuMTMzLTM0LjEzM3MzNC4xMzMgMTUuMjkyIDM0LjEzMyAzNC4xMzN2NTEyLjUxMmMwIDE4Ljg0MiAxNS4zMjYgMzQuMTMzIDM0LjEzMyAzNC4xMzNoNDc3LjkzNWMxOC44NDIgMCAzNC4xMzMtMTUuMjkyIDM0LjEzMy0zNC4xMzN2LTUxMS4xMTNjMC0xOC44NDIgMTUuMjU4LTM0LjEzMyAzNC4xMzMtMzQuMTMzczM0LjEzMyAxNS4yOTIgMzQuMTMzIDM0LjEzM3Y1MTEuMTEzYzAgNTYuNDU3LTQ1Ljk0MyAxMDIuNC0xMDIuNCAxMDIuNHoiIHAtaWQ9IjI0MDIiIGZpbGw9IiM1MTUxNTEiPjwvcGF0aD48L3N2Zz4=" alt=""></div>
+            <ul>
+                <li v-if="historyArray.length" v-for="(item,index) in historyArray">{{item}}</li>
+            </ul>
+        </div>
+
+        <!--搜索自动补全-->
+        <ul class="auto" v-if="!flag">
+            <li v-if="keyword.length" v-for="(item,index) in keyword">{{item}}</li>
+        </ul>
+    </div>
+</body>
+</html>
+<script>
+
+    new Vue({
+        el : "#app",
+        data : {
+            searchText : "",
+            historyArray : [],
+            flag : true,
+            keyword : []
+        },
+        methods : {
+            searchContent : function () {
+                //将文本框的内容添加到数组里面
+                this.historyArray.push(this.searchText)
+                //讲数组的内容存储到本地,前提是要将数组转化为string类型
+                localStorage.setItem("array",JSON.stringify(this.historyArray));
+                //获取存储在本地的数据
+                this.historyArray = JSON.parse(localStorage.getItem("array"))
+            },
+            test : function () {
+                this.flag = this.searchText == "" ? true : false;
+
+                var that = this;
+                axios.get("http://localhost:8888/",{params : {query : this.searchText}}).then(function (response) {
+                    console.log(response.data.keywords);
+                    // that.keyword = response.data.keywords;
+                    that.keyword = that.searchText == "" ? [] : response.data.keywords
+                }).catch(function (error) {
+                    console.log(error)
+                })
+            },
+            searchContent : function () {
+
+            }
+        },
+        //当元素挂载到实实例上之后就会调用
+        mounted(){
+            //判断是否能获取到本地的数据,如果能获取到就把本地的数据赋给展示的数据的数组
+            if(localStorage.getItem("array")){
+                this.historyArray = JSON.parse(localStorage.getItem("array"))
+            }
+        }
+    })
+
+</script>
