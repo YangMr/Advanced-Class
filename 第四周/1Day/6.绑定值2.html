@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+
+        <input type="radio" v-model="picked" :value="value">
+
+        <p>{{picked}}</p>
+    </div>
+</body>
+</html>
+<script>
+
+    new Vue({
+        el : "#app",
+        data : {
+           picked : false, value : "123"
+        },
+        methods : {
+
+        },
+        mounted(){
+
+        }
+    })
+
+</script>

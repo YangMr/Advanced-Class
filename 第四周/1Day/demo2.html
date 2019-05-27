@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <style>
+        #app{padding: 20px; width: 800px; border: 1px solid #ccc; margin: 30px auto;}
+        #app p{font-weight: bold;}
+    </style>
+</head>
+<body>
+    <div id="app">
+
+        <p>父组件的值为:{{counter}}</p>
+        <hr>
+
+        <my-child @get="getData"></my-child>
+    </div>
+</body>
+</html>
+<script>
+
+    var myChild = {
+        template : "<div><button @click='send'>发送数据到父页面</button></div>",
+        data : function () {
+            return {
+                flag : 10
+            }
+        },
+        methods : {
+            send : function () {
+                this.$emit("get",this.flag)
+            }
+        }
+    }
+
+    new Vue({
+        el : "#app",
+        data : {
+            counter : 0
+        },
+        methods : {
+          getData : function (num) {
+              this.counter = num;
+          }
+        },
+        components : {
+            myChild
+        }
+    })
+
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <my-header></my-header>
+        <my-footer></my-footer>
+    </div>
+</body>
+</html>
+<script>
+
+   Vue.component("my-header",{
+       template : "<div class='header'>{{message}}</div>",
+       data : function () {
+           return {
+               message : "hello"
+           }
+       },
+       methods : {
+
+       }
+   })
+
+   Vue.component("my-footer",{
+       template : "<div class='footer'>{{message}}</div>",
+       data : function () {
+            return {
+                message : "world"
+            }
+       }
+   })
+
+    var app = new Vue({
+        el : "#app",
+    })
+
+
+
+</script>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="checkbox" v-model="checkAll.check" @change="checkAllBox">
+        <label for="">{{checkAll.name}} - {{checkAll.check}}</label>
+        <hr>
+        <p v-for="item in lists">
+            <input type="checkbox" @change="curChange" v-model="item.check"><label for="">{{item.name}}</label>
+        </p>
+    </div>
+</body>
+</html>
+<script>
+
+    var app = new Vue({
+        el : "#app",
+        data : {
+            checkAll : {name : "全选",check : false},
+            lists : [
+                { name: '小米', check: true },
+                { name: '华为1', check: false },
+                { name: '华为2', check: false },
+                { name: '华为3', check: false },
+                { name: '华为4', check: false }
+                ]
+        },
+        methods : {
+            checkAllBox : function () {
+                var that = this;
+                this.lists.forEach(function (item,index) {
+                    item.check = that.checkAll.check
+                })
+
+
+
+                /*if(this.checkAll.check){
+                    this.lists.forEach(function (item,index) {
+                        item.check = that.checkAll.check
+                    })
+                }else{
+                    this.lists.forEach(function (item,index) {
+                        item.check = that.checkAll.check
+                    })
+                }*/
+            }
+        }
+    })
+
+</script>

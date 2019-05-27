@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button @click="flag=true">选中</button>
+        <button @click="flag=false">不选中</button>
+        <button @click="test">反选</button>
+
+        <hr>
+        <input type="radio" :checked="flag">喜欢
+        <input type="radio" :checked="flag">喜欢
+        <input type="radio" :checked="flag">喜欢
+        <input type="radio" :checked="flag">喜欢
+        <input type="radio" :checked="flag">喜欢
+        <input type="radio" :checked="flag">喜欢
+        <input type="radio" :checked="flag">喜欢
+        <input type="radio" :checked="flag">喜欢
+        <input type="radio" :checked="flag">喜欢
+        <input type="radio" :checked="flag">喜欢
+        <input type="radio" :checked="flag">喜欢
+        <input type="radio" :checked="flag">喜欢
+        <input type="radio" :checked="flag">喜欢
+        <input type="radio" :checked="flag">喜欢
+    </div>
+</body>
+</html>
+<script>
+
+    var app = new Vue({
+        el : "#app",
+        data : {
+          flag :false
+        },
+        methods : {
+            test : function () {
+
+            }
+        }
+    })
+
+</script>

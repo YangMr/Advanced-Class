@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" placeholder="请输入..." v-model="message">
+        <p>{{message}}</p>
+    </div>
+</body>
+</html>
+<script>
+
+    var app = new Vue({
+        el : "#app",
+        data : {
+            message : ""
+        },
+        methods : {
+            handleInput : function (e) {
+                this.message = e.target.value;
+            }
+        }
+    })
+
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="radio" value="html" v-model="picked" id="html">
+        <label for="html">HTML</label>
+        <input type="radio" value="js" v-model="picked" id="js">
+        <label for="js">JavaScript</label>
+        <input type="radio" value="css" v-model="picked" id="css">
+        <label for="css">CSS</label>
+        <hr>
+        <span>{{picked}}</span>
+    </div>
+</body>
+</html>
+<script>
+
+    var app = new Vue({
+        el : "#app",
+        data : {
+            picked : "js"
+        },
+        methods : {
+
+        }
+    })
+
+</script>

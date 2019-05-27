@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <label for="">用户名:</label>
+        <input type="text" placeholder="请输入..." v-model="message"><span>{{message}}</span>
+
+        <hr>
+
+        <label for="">用户留言:</label>
+        <textarea name="" v-model="liuyan" id="" placeholder="请输入留言" cols="30" rows="10"></textarea>
+        <span>{{liuyan}}</span>
+        <hr>
+
+        <button @click="test">get data</button>
+    </div>
+</body>
+</html>
+<script>
+
+    var app = new Vue({
+        el : "#app",
+        data : {
+            message : "",
+            liuyan : ""
+        },
+        methods : {
+            test : function () {
+                alert(this.message + this.liuyan)
+            }
+        }
+    })
+
+</script>

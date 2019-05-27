@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <table>
+           <tbody is="my-component"></tbody>
+            <!--<my-component></my-component>-->
+        </table>
+    </div>
+</body>
+</html>
+<script>
+
+    var Child = {
+        template : "<tr><th>编号</th><th>姓名</th><th>性别</th></tr>"
+    }
+
+    var app = new Vue({
+        el : "#app",
+        //局部注册
+        components : {
+            "my-component" : Child
+        }
+    })
+
+
+
+</script>

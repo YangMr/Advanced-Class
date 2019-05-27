@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>
+            性别:
+            <input type="radio" value="man" v-model="sex" id="man"><label for="man">男</label>
+            <input type="radio" value="woman" v-model="sex" id="woman"><label for="woman">女</label>
+        </p>
+        <p>{{sex}}</p>
+    </div>
+</body>
+</html>
+<script>
+
+    var app = new Vue({
+        el : "#app",
+        data : {
+            sex : "man"
+        },
+        methods : {
+
+        }
+    })
+
+</script>

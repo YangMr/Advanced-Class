@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+
+        <input type="radio" v-model="picked" id="sex1" value="one">  <label for="sex1">第一题</label>
+        <input type="radio" v-model="picked" id="sex2" value="two">  <label for="sex2">第二题</label>
+        <input type="radio" v-model="picked" id="sex3" value="three"><label for="sex3">第三题</label>
+        <input type="radio" v-model="picked" id="sex4" value="four"> <label for="sex4">第四题</label>
+
+        <p>{{picked}}</p>
+    </div>
+</body>
+</html>
+<script>
+
+    new Vue({
+        el : "#app",
+        data : {
+            picked : "one"
+        },
+        methods : {
+
+        },
+        mounted(){
+
+        }
+    })
+
+</script>

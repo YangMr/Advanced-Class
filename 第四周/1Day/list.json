@@ -1,0 +1,25 @@
+{
+  "productList" : [
+    {
+      "id" : 1,
+      "check" : true,
+      "name" : "iPhone7",
+      "price" : 6188,
+      "count" : 1
+    },
+    {
+      "id" : 2,
+      "check" : true,
+      "name" : "iPad Pro",
+      "price" : 5888,
+      "count" : 1
+    },
+    {
+      "id" : 3,
+      "check" : true,
+      "name" : "MacBook Pro",
+      "price" : 21488,
+      "count" : 1
+    }
+  ]
+}

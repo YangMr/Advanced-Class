@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+
+        <select name="" id="" v-model="selected">
+            <option v-for="item in options" :value="item.value">{{item.text}}</option>
+        </select>
+
+        <p>{{selected}}</p>
+
+    </div>
+</body>
+</html>
+<script>
+
+    new Vue({
+        el : "#app",
+        data : {
+            selected : "",
+            options : [
+                {
+                    text : "HTML语言",
+                    value : "html"
+                },
+                {
+                    text : "JAVASCRIPT语言",
+                    value : "js"
+                },
+                {
+                    text : "CSS语言",
+                    value : "css"
+                }
+            ]
+        },
+        methods : {
+
+        },
+        mounted(){
+            this.selected = this.options[0].value
+        }
+    })
+
+</script>

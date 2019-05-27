@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <style>
+        #app{padding: 20px; width: 800px; border: 1px solid #ccc; margin: 30px auto;}
+        #app p{font-weight: bold;}
+    </style>
+</head>
+<body>
+    <div id="app">
+
+        <p >父页面的Counter值为: {{counter}}</p>
+
+        <child v-bind:aa="counter" @send="sendData"></child>
+
+    </div>
+</body>
+</html>
+<script>
+
+    var Child = {
+        template : "<div>{{message}}<br/><button @click='test'>Add Counter</button></div>",
+        data : function () {
+            return {
+                message : this.aa
+            }
+        },
+        methods : {
+            test : function () {
+                this.message++;
+                this.$emit("send",this.message);
+            }
+        },
+        props : ["aa"]
+    };
+
+    var app = new Vue({
+        el: "#app",
+        data : {
+            counter : 0
+        },
+        //组件的局部注册
+        components : {
+            //子组件Child
+            Child
+        },
+        methods : {
+            sendData : function (data) {
+               this.counter = data
+            }
+        }
+    })
+
+</script>

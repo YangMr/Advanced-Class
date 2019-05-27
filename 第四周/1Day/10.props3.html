@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="str">
+        <my-component b="[1,2,3]"></my-component>
+        <my-component :b="[1,2,3]"></my-component>
+    </div>
+</body>
+</html>
+<script>
+
+  var myComponent = {
+      template : "<div>{{b.length}} <button @click='change'>change</button></div>",
+      props : ["b"],
+      methods : {
+          change : function () {
+              this.b = "123"
+          }
+      }
+
+  }
+
+  new Vue({
+      el : "#app",
+      //局部注册子组件
+      components : {
+          myComponent
+      },
+      data : function () {
+          return {
+              str : "我想好好学习"
+          }
+      }
+  })
+
+
+
+</script>

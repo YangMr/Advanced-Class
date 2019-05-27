@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <my-header></my-header>
+        <my-footer></my-footer>
+
+    </div>
+</body>
+</html>
+<script>
+    var data = {
+        counter : 0
+    }
+
+    var myHeader = {
+        template : "<button @click='counter++'>{{counter}}</button>",
+        data : function () {
+            return data;
+        }
+    };
+    var myFooter = {
+        template : "<button @click='counter++'>{{counter}}</button>",
+        data : function () {
+            return data;
+        }
+    }
+
+    var app = new Vue({
+        el : "#app",
+        components : {
+            /*"myHeader" : myHeader,
+            "myFooter" : myFooter*/
+            myHeader,
+            myFooter
+        }
+    })
+
+
+
+</script>

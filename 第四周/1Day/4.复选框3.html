@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+
+        <input type="checkbox" v-model="checked" id="checked1" value="html">
+        <label for="checked1">HTML</label>
+
+        <input type="checkbox" v-model="checked" id="checked2" value="CSS">
+        <label for="checked2">CSS</label>
+
+        <input type="checkbox" v-model="checked" id="checked3" value="JS">
+        <label for="checked3">JavaScript</label>
+
+        <hr>
+        <p>您选择的是: </p>
+        <ul>
+            <li v-if="checked.length" v-for="item in checked">{{item}}</li>
+        </ul>
+
+        <button @click="send">send</button>
+    </div>
+</body>
+</html>
+<script>
+
+    var app = new Vue({
+        el : "#app",
+        data : {
+            checked : []
+        },
+        methods : {
+            send : function () {
+                alert(this.checked)
+            }
+        }
+    })
+
+</script>

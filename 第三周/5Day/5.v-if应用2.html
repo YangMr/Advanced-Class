@@ -57,11 +57,11 @@
                 //获取存储在本地的数据
                 this.historyArray = JSON.parse(localStorage.getItem("array"))
             },
-            test : function () {
+            test : function (e) {
                 this.flag = this.searchText == "" ? true : false;
 
                 var that = this;
-                axios.get("http://localhost:8888/",{params : {query : this.searchText}}).then(function (response) {
+                axios.get("http://localhost:8888/",{params : {query : e.target.value}}).then(function (response) {
                     console.log(response.data.keywords);
                     // that.keyword = response.data.keywords;
                     that.keyword = that.searchText == "" ? [] : response.data.keywords
