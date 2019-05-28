@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>总数: {{total}}</p>
+
+        <my-component v-model="total"></my-component>
+    </div>
+</body>
+</html>
+<script>
+
+    var myComponent = {
+        template : "<div> <button @click='handleClick'>+1</button> </div>",
+        data : function () {
+            return {
+                counter : 0
+            }
+        },
+        methods : {
+            handleClick : function () {
+                this.counter++;
+                this.$emit("input",this.counter)
+            }
+        }
+    }
+
+    new Vue({
+        el : "#app",
+        data : {
+            total : 0
+        },
+        components : {
+            myComponent
+        }
+    })
+
+</script>

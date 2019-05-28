@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+
+        *{margin: 0; padding: 0;}
+        #app{min-width: 320px; max-width: 640px; margin: 0 auto;}
+        #app p{height: 30px; background: #ccc; line-height: 30px; font-size: 14px; padding-left: 10px;}
+        #app ul {list-style-type: none;}
+        #app ul li{height: 35px; line-height: 35px;}
+        #app li img{width: 24px; height: 24px; vertical-align: middle;}
+        #app .outher{text-align: center;}
+    </style>
+</head>
+<body>
+    <div id="app">
+        <p>男生</p>
+        <ul>
+            <li v-for="item in rankList.male" v-if="!item.collapse">
+               <rank-list :a="item" :b="url"></rank-list>
+            </li>
+            <li @click="flag1 =!flag1">
+                <div class="outher">别人家的排行榜</div>
+            </li>
+
+                <ul v-if="flag1">
+                    <li v-for="item in rankList.male" v-if="item.collapse">
+                        <rank-list :a="item" :b="url"></rank-list>
+                    </li>
+                </ul>
+
+
+        </ul>
+        <p>女生</p>
+        <ul>
+            <li v-for="item in rankList.female" v-if="!item.collapse">
+                <rank-list :a="item" :b="url"></rank-list>
+            </li>
+            <li @click="flag2 = !flag2">
+                <div class="outher">别人家的排行榜</div>
+            </li>
+
+                <ul v-if="flag2">
+                    <li v-for="item in rankList.female" v-if="item.collapse">
+                        <rank-list :a="item" :b="url"></rank-list>
+                    </li>
+                </ul>
+
+        </ul>
+    </div>
+</body>
+</html>
+<script>
+
+    var rankList = {
+        template : '<div><img :src="b + item.cover" alt="">{{item.title}}</div>',
+        props : ["a","b"],
+        data : function () {
+            return {
+                item : ""
+            }
+        },
+        mounted() {
+            this.item = this.a
+            console.log(this.item)
+        }
+    };
+
+    var app = new Vue({
+        el : "#app",
+        data : {
+           rankList : {},
+            url : "http://statics.zhuishushenqi.com",
+            flag1 : false,
+            flag2 : false
+        },
+        methods : {
+
+        },
+        components : {
+            rankList
+        },
+        mounted(){
+            var _this = this;
+            axios.get("http://localhost:8880/ranking/gender").then(function (response) {
+                _this.rankList = response.data;
+            }).catch(function (error) {
+                console.log(error)
+            })
+        }
+    })
+
+</script>

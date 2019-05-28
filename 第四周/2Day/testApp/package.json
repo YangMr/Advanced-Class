@@ -1,0 +1,14 @@
+{
+  "name": "testapp",
+  "version": "1.0.0",
+  "description": "这是一个testApp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}

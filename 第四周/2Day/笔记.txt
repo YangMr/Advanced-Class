@@ -1,0 +1,65 @@
+模块化:AMD和CMD规范
+
+什么是模块:
+
+    一个文件就可以模块
+
+
+语法:
+    import export
+    require  modlue.export    CommonJS
+
+vue:
+    vue-cli 安装
+    通过vue-cli创建vue项目
+
+WebPack
+
+单文件组件
+
+
+import 导入
+
+export 导出
+
+require 导入
+
+exports  导出
+module.exports 导出
+
+----------------------------------------------------------
+通过vue创建项目:
+ 1.安装vue-cli    在安装vue-cli之前,须先安装 node npm cnpm
+
+    cnpm install vue-cli -g
+
+ 2.检测vue-cli安装的版本
+
+    vue -V
+
+  3.查看vue-cli提供的模板
+
+    vue list
+
+  4.通过vue-cli创建项目
+
+    vue init 模板名称 项目名称
+
+    今天用的是: vue init webpack-simple demo
+
+  5.进入创建的项目目录
+    cd demo
+
+  6.安装项目所需要的依赖
+
+     cnpm install
+
+  7. 启动项目
+
+    npm run dev
+
+
+
+
+
+

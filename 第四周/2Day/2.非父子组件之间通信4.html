@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+
+        <component-one></component-one>
+
+        <hr/>
+
+        <component-two></component-two>
+
+    </div>
+</body>
+</html>
+<script>
+
+    var bus = new Vue();
+    //孙子组件
+
+    var sunZi = {
+        template : "<h1>{{message}}</h1>",
+        data : function () {
+            return {
+                message : "123123"
+            }
+        },
+        mounted(){
+            var _this = this;
+            bus.$on("on-data",function (data) {
+                _this.message = data;
+            })
+        }
+    };
+    //第一个组件
+    var componentOne = {
+        template : "<div><button @click='handleClick'>我是第一个组件</button> {{counter}} <sunZi></sunZi></div>",
+        data : function () {
+            return {
+                counter : 0
+            }
+        },
+        components : {
+            sunZi
+        },
+        methods : {
+            handleClick : function () {
+                this.counter++;
+                bus.$emit("on-message",this.counter);
+            }
+        },
+        mounted() {
+            var _this = this;
+            bus.$on("on-data",function (data) {
+                _this.counter = data;
+            })
+        }
+    };
+    //第二个组件
+    var componentTwo = {
+        template : "<div><button @click='add'>我是第二个组件</button><br>{{counter}}</div>",
+        data : function () {
+            return {
+                counter : 0
+            }
+        },
+        methods : {
+          add : function () {
+              this.counter+=2;
+              bus.$emit("on-data",this.counter); //send
+          }
+        },
+        //当元素挂载到实例上之后执行
+        mounted() {
+            var _this = this;
+            bus.$on("on-message",function (data) {
+                _this.counter = data;
+            })
+        }
+    }
+
+
+
+  var app = new Vue({
+      el : "#app",
+      data : {
+
+      },
+      components : {
+        componentOne,
+        componentTwo
+      }
+  })
+
+</script>

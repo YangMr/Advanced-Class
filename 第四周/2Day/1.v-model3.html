@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>总数: {{total}}</p>
+
+        <my-component v-model="total"></my-component>
+    </div>
+</body>
+</html>
+<script>
+
+    var myComponent = {
+        props : ["a"],
+        template : "<input :value='a' @input='updateValue'>",
+        methods : {
+            updateValue : function (event) {
+                this.$emit("input",event.target.value)
+            }
+        }
+    };
+
+    new Vue({
+        el : "#app",
+        data : {
+            total : 1
+        },
+        components : {
+            myComponent
+        },
+        methods : {
+
+        }
+    })
+
+</script>

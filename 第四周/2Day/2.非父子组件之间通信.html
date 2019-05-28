@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+
+        <component-one></component-one>
+
+        <hr/>
+
+        <component-two></component-two>
+
+    </div>
+</body>
+</html>
+<script>
+    //第一个组件
+    var componentOne = {
+        template : "<div><button>我是第一个组件</button></div>"
+    };
+
+    var componentTwo = {
+        template : "<div><button>我是第二个组件</button></div>"
+    }
+
+  var app = new Vue({
+      el : "#app",
+      data : {
+
+      },
+      components : {
+        componentOne,
+        componentTwo
+      }
+  })
+
+</script>
