@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <app>
+            <p>我想好好学习</p>
+            <p>i like vue</p>
+        </app>
+    </div>
+</body>
+</html>
+<script>
+    var app = {
+        template : "<div>{{message}} <slot><p>1111</p></slot></div>",
+        data : function () {
+            return {
+                message : "hello"
+            }
+        }
+    };
+
+    var menuMain = {
+        template: "<div>{{title}}</div>",
+        data : function () {
+            return {
+                title : "我是主菜单"
+            }
+        }
+    }
+
+    new Vue({
+        el : "#app",
+        data : {
+            a : false
+        },
+        components : {
+            app,
+            menuMain
+        }
+    })
+
+</script>
