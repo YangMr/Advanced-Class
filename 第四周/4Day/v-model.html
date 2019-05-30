@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+		<!-- 	<input type="text" v-model="parentMessage">
+			<hr> -->
+			<Child v-model="parentMessage"></Child>
+			{{parentMessage}}
+		</div>
+	</body>
+</html>
+<script>
+	
+	var Child = {
+		template : "<div><button @click='change'>{{parentMessage}}</button></div>",
+		props :["parentMessage"],
+		data : function(){
+			return {
+				value : this.parentMessage
+			}
+		},
+		methods : {
+			change : function(){
+				alert(this.value)
+			}
+		},
+		mounted(){
+			
+		}
+	}
+	
+	var app = new Vue({
+		el : "#app",
+		data:{
+			parentMessage : "123"
+		},
+		components : {
+			Child
+		}
+	})
+	
+	
+</script>

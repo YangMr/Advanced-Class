@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			{{counter.num}}
+			<hr>
+			<button @click="add">add</button>
+		</div>
+	</body>
+</html>
+<script>
+	
+	new Vue({
+		el : "#app",
+		data : {
+			counter : {num : 5, age :20} 
+		},
+		watch : {  
+			//第一个参数表示更新之后的值.第二个参数表示更新之前的值
+			"counter.num" : {
+				handler : function(newValue,oldValue){
+					console.log(newValue,oldValue)
+				},
+				deep: true,
+				immediate : true
+			}
+		},
+		methods : {
+			add : function(){
+				this.counter.num++;
+			}
+		}
+	})
+	
+</script>
