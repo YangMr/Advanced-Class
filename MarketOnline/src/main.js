@@ -3,6 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import './assets/stylesheets/base.css'
+import 'font-awesome/css/font-awesome.min.css'
+
+import Axios from 'axios'
+Vue.prototype.$axios = Axios;
 
 Vue.config.productionTip = false
 

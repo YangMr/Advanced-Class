@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<div v-dir:text="message"></div>
+		</div>
+	</body>
+</html>
+<script>
+	
+	
+	
+	new Vue({
+		el : "#app",
+		data : {
+			message : "我想好好学习"
+		},
+		directives : {
+			"dir" : {
+				bind : function(el,binding,vnode){
+					if(binding.arg == "text"){
+						el.innerHTML = binding.value
+					}
+				}
+			}
+		}
+	})
+	
+</script>

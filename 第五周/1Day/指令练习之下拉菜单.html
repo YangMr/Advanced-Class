@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<div class="menu" v-clickoutside="handleclose">
+				<button @click="show = !show">点击显示下拉菜单</button>
+				<ul class="sub_menu" v-show="show">
+					<li v-for="item in array">{{item}}</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
+<script>
+	
+	new Vue({
+		el : "#app",
+		data : {
+			array : ["糖醋里脊","地三鲜","宫保鸡丁"],
+			show : false
+		},
+		methods : {
+			handleclose : function(){
+				this.show = false
+			}
+		},
+		directives : {
+			"clickoutside" : {
+				bind : function(el,binding,vnode){
+					function documentHandle(e){
+						if(el.contains(e.target)){
+							return false;
+						}
+						if(binding.expression){
+							console.log(binding.expression);
+							binding.value(e)
+						}
+					}
+					el.__vueClickOutside = documentHandle;
+					console.log(el.__vueClickOutside)
+					document.addEventListener("click",documentHandle)
+				}
+			}
+		}
+	})
+	
+</script>

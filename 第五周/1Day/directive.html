@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" v-focus>
+		</div>
+	</body>
+</html>
+<script>
+	
+	//注册全局指令
+	Vue.directive("focus",{
+		inserted(el){
+			el.focus()
+		}
+	})
+	
+	new Vue({
+		el : "#app",
+		data : {
+			
+		}
+	})
+	
+</script>

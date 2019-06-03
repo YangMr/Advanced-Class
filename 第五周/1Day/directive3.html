@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<!-- <div v-test:msg.a.b="message"></div> -->
+			<div v-aaa="val"></div>
+		<!-- 	<span v-text="123"></span> -->
+			<!-- <input type="text" v-test>
+			<textarea v-test name="" id="" cols="30" rows="10"></textarea> -->
+		</div>
+	</body>
+</html>
+<script>
+	
+	new Vue({
+		el : "#app",
+		data : {
+			message : "some text",
+			val : "123"
+		},
+		directives : {
+			"test" : {
+				bind : function(el,binding,vnode){
+					var keys = [];
+					for(var i in vnode){
+						keys.push(i)
+					}
+					
+					el.innerHTML = "name:" +binding.name + "<br>" +
+									"value:" + binding.value + "<br>" +
+									 "expression:" + binding.expression+ "<br>" +
+									 "argument:" + binding.arg + "<br>" +
+									 "modifiers:" + binding.modifiers+ "<br>" +
+									 "vnode:" + keys.join(",");
+									 
+					console.log(binding.modifiers)			 
+				}
+			},
+			"aaa" : {
+				bind : function(el,binding){
+					el.innerHTML = binding.value
+				}
+			}
+		}
+	})
+	
+</script>

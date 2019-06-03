@@ -1,0 +1,341 @@
+1.创建项目
+2.导入资源,创建组件
+3.在main.js导入base.css样式文件
+	import "./assets/stylesheets/base.css"
+4.安装字体库
+	cnpm install font-awesome --save-dev
+5.在main.js导入font-awesome
+	import "font-awesome/css/font-awesome.min.css"
+6.在路由文件内注册组件
+	import Index from '@/components/Index'
+	import Cart from '@/components/Cart'
+	import Order from '@/components/Order'
+	import Goods from '@/components/Goods'
+	
+	 routes: [
+	  {
+	    path: '/',
+	    name: 'Index',
+	    component: Index
+	  },
+		{
+			path : '/goods',
+			name : 'Goods',
+			component : Goods
+		},
+		{
+			path : '/cart',
+			name : 'Cart',
+			component : Cart
+		},
+		{
+			path : '/order',
+			name : 'Order',
+			component : Order
+		}
+	]
+7.在config中模拟数据
+	export default {
+	  navbars: [
+	    {
+	      text: '女装/内衣',
+	      icon: 'fa fa-female'
+	    },
+	    {
+	      text: '男装/运动户外',
+	      icon: 'fa fa-futbol-o'
+	    },
+	    {
+	      text: '美妆/个人护理',
+	      icon: 'fa fa-fire-extinguisher'
+	    },
+	    {
+	      text: '腕表/眼镜/珠宝饰品',
+	      icon: 'fa fa-diamond'
+	    },
+	    {
+	      text: '手机/数码/电脑办公',
+	      icon: 'fa fa-laptop'
+	    },
+	    {
+	      text: '母婴/玩具',
+	      icon: 'fa fa-empire'
+	    },
+	    {
+	      text: '零食/茶酒/进口食品',
+	      icon: 'fa fa-envira'
+	    },
+	    {
+	      text: '生鲜水果',
+	      icon: 'fa fa-apple'
+	    },
+	    {
+	      text: '大家电/生活电器',
+	      icon: 'fa fa-television'
+	    },
+	    {
+	      text: '家居建材',
+	      icon: 'fa fa-building-o'
+	    },
+	    {
+	      text: '汽车/配件/用品',
+	      icon: 'fa fa-truck'
+	    },
+	    {
+	      text: '家纺/家饰/鲜花',
+	      icon: 'fa fa-thumb-tack'
+	    },
+	    {
+	      text: '医药保健',
+	      icon: 'fa fa-tint'
+	    },
+	    {
+	      text: '厨具/收纳/宠物',
+	      icon: 'fa fa-gift'
+	    }
+	  ],
+	  goods: [
+	    {
+	      name: 'nuotai',
+	      text: '诺泰暖宫护腰艾灸加热女生必备神器',
+	      address: '山东泰安',
+	      type: '包邮',
+	      price: '536.00',
+	      onlinePrice: '208.00',
+	      cover: './static/images/nuotai01.jpg',
+	      poster: './static/images/slide01.png',
+	      color: '#e8e8e8',
+	      images: [
+	        './static/images/nuotai01.jpg',
+	        './static/images/nuotai02.jpg',
+	        './static/images/nuotai03.jpg',
+	        './static/images/nuotai04.jpg',
+	        './static/images/nuotai05.jpg'
+	      ],
+	      thumbnails: [
+	        './static/images/nuotai01_sm.jpg',
+	        './static/images/nuotai02_sm.jpg',
+	        './static/images/nuotai03_sm.jpg',
+	        './static/images/nuotai04_sm.jpg',
+	        './static/images/nuotai05_sm.jpg'
+	      ]
+	    },
+	    {
+	      name: 'qixi',
+	      text: '七喜柠檬味碳酸饮料整箱330ml*24促销装',
+	      address: '上海',
+	      type: '满88(20kg内)包邮',
+	      price: '48.90',
+	      onlinePrice: '43.90',
+	      cover: './static/images/qixi01.jpg',
+	      poster: './static/images/slide02.png',
+	      color: '#17b14f',
+	      images: [
+	        './static/images/qixi01.jpg',
+	        './static/images/qixi02.jpg',
+	        './static/images/qixi03.jpg',
+	        './static/images/qixi04.jpg',
+	        './static/images/qixi05.jpg'
+	      ],
+	      thumbnails: [
+	        './static/images/qixi01_sm.jpg',
+	        './static/images/qixi02_sm.jpg',
+	        './static/images/qixi03_sm.jpg',
+	        './static/images/qixi04_sm.jpg',
+	        './static/images/qixi05_sm.jpg'
+	      ]
+	    },
+	    {
+	      name: 'bama',
+	      text: '八马茶业 铁观音茶叶浓香型赛珍珠1000g',
+	      address: '广东深圳',
+	      type: '包邮',
+	      price: '800.00',
+	      onlinePrice: '600.00',
+	      cover: './static/images/bama01.jpg',
+	      poster: './static/images/slide03.png',
+	      color: '#e8e8e8',
+	      images: [
+	        './static/images/bama01.jpg',
+	        './static/images/bama02.jpg',
+	        './static/images/bama03.jpg',
+	        './static/images/bama04.jpg',
+	        './static/images/bama05.jpg'
+	      ],
+	      thumbnails: [
+	        './static/images/bama01_sm.jpg',
+	        './static/images/bama02_sm.jpg',
+	        './static/images/bama03_sm.jpg',
+	        './static/images/bama04_sm.jpg',
+	        './static/images/bama05_sm.jpg'
+	      ]
+	    },
+	    {
+	      name: 'Lee',
+	      text: 'Lee男装 2018春夏X-LINE白色短袖T恤 秒变男神',
+	      address: '上海',
+	      type: '包邮',
+	      price: '350.00',
+	      onlinePrice: '239.00',
+	      cover: './static/images/Lee01.jpg',
+	      poster: './static/images/slide04.png',
+	      color: '#96520c',
+	      images: [
+	        './static/images/Lee01.jpg',
+	        './static/images/Lee02.jpg',
+	        './static/images/Lee03.jpg',
+	        './static/images/Lee04.jpg',
+	        './static/images/Lee05.jpg'
+	      ],
+	      thumbnails: [
+	        './static/images/Lee01_sm.jpg',
+	        './static/images/Lee02_sm.jpg',
+	        './static/images/Lee03_sm.jpg',
+	        './static/images/Lee04_sm.jpg',
+	        './static/images/Lee05_sm.jpg'
+	      ]
+	    }
+	  ]
+	}
+8.在App.vue组件里面编写头部内容
+	<template>
+	  <div id="app">
+			<!-- 背景 -->
+			<div class="gs-menu-bg"></div>
+			<!-- 头部 -->
+			<div class="gs-header">
+				<!-- 顶部 -->
+				<div class="gs-quick-menu">
+					<div class="gs-profile">
+						<span>您好,游客</span>&nbsp;&nbsp;&nbsp;&nbsp;
+						<span>消息 <strong>0</strong></span>
+					</div>
+					<ul class="gs-nav">
+						<li class="gs-nav-item">
+							<router-link class="gs-link" to="/order">我的订单</router-link>
+						</li>
+						<li class="gs-nav-item">
+							<router-link class="gs-link" to="/cart">
+								<i class="fa fa-shopping-cart"></i>&nbsp;购物车
+							</router-link>
+						</li>
+						<li class="gs-nav-item">
+							<span class="gs-link gs-forbid">收藏夹</span>
+						</li>
+						<li class="gs-nav-item">
+							<span class="gs-link gs-forbid">商家入口</span>
+						</li>
+					</ul>
+				</div>
+				<!-- 搜索 -->
+				<div>
+					<div class="gs-logo" @click="toHomePage"></div>
+					<div class="gs-search-box">
+						<input type="text" class="gs-search-input" placeholder="请输入商品/店铺"><!--
+	          --><span class="gs-search-btn">搜&nbsp;&nbsp;索</span>
+					</div>
+				</div>
+			</div>
+			<div class="dividor"></div>
+	    <router-view/>
+	  </div>
+	</template>
+	
+	<script>
+	export default {
+	  name: 'App',
+		methods : {
+			//点击跳转到首页
+			toHomePage(){
+				this.$router.push("/");
+			}
+		}
+	}
+	</script>
+	
+	<style>
+	.gs-menu-bg{
+		width: 100%;
+		height: 30px;
+		position: absolute;
+		background-color: #f2f2f2;
+		border-bottom:1px solid #e5e5e5;
+	}
+	.gs-header{
+		width: 1120px;
+		margin: 0 auto;
+	}
+	.gs-header .gs-quick-menu{
+		position: relative;
+		font-size: 12px;
+		color:#999;
+		background-color: #f2f2f2;
+	}
+	.gs-header .gs-profile{
+		line-height: 30px;
+		display: inline-block;
+		cursor: pointer; 
+	}
+	.gs-header .gs-nav{
+		position: absolute;
+		right: 0;
+		display: inline-block;
+		line-height: 30px;
+		list-style-type: none;
+	}
+	.gs-header .gs-nav-item{
+		display: inline-block;
+		margin-left: 12px;
+	}
+	.gs-header .gs-link{
+		color: #999;
+		text-decoration: none;
+		outline: none;
+	}
+	.gs-header .gs-forbid{
+		cursor: not-allowed;
+	}
+	.gs-header .gs-logo{
+		width: 188px;
+		height: 75px;
+		background: url(./assets/images/logo.png) no-repeat;
+		background-size: cover;
+		cursor: pointer;
+		margin: 10px 0;
+		display: inline-block;
+	}
+	.gs-header .gs-search-box{
+		display: inline-block;
+		float: right;
+		line-height: 100px;
+	}
+	.gs-header .gs-search-input{
+		width: 240px;
+		box-sizing: border-box;
+		line-height: 32px;
+		padding-left: 6px;
+		outline: none;
+		vertical-align: middle;
+		border:2px solid #95bf47;
+	}
+	.gs-header .gs-search-btn{
+		display: inline-block;
+		color: #fff;
+		background: #95bf47;
+		/* padding-left:16px;
+		padding-right: 16px; */
+		padding: 0 16px;
+		line-height: 36px;
+		vertical-align: middle;
+		font-weight: 600;
+		cursor: pointer;
+		-ms-user-select: element;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+	}
+	.dividor{
+		height: 2px;
+		background: #95bf47;
+	}
+	</style>
+	
