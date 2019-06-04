@@ -1,15 +1,12 @@
 <template>
   <div id="app">
-		<!-- <Home></Home>
-		<router-view></router-view> -->
-	<!-- 	<Task></Task> -->
+		<Tab></Tab>
 		<router-view></router-view>
   </div>
 </template>
 
-<script>
-import Home from "./Home.vue"	
-import Task from "./task.vue"
+<script>	
+import Tab from "./views/Tab.vue"
 export default {
   name: 'app',
   data () {
@@ -18,12 +15,11 @@ export default {
     }
   },
 	components : {
-		Home,
-		Task
+		Tab
 	}
 }
 </script>
 
 <style>
-	html,body,div{margin: 0; padding: 0;}
+
 </style>

@@ -3,7 +3,7 @@
 		<ul>
 			<li><router-link :to="{name : 'index'}">书架</router-link></li>
 			<li><router-link :to="{name : 'about'}">分类</router-link></li>
-			<li><router-link :to="{name : 'index'}">排行</router-link></li>
+			<li><router-link :to="{name : 'rank'}">排行</router-link></li>
 			<li><router-link :to="{name : 'search'}">搜索</router-link></li>
 		</ul>
 	</div>
