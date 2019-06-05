@@ -1,0 +1,65 @@
+<template>
+	<div>
+		<h1>我是list组件</h1>
+		<hr>
+		<p>我是list第1个</p>
+		<p>我是list第2个</p>
+		<p>我是list第3个</p>
+		<p>我是list第4个</p>
+		<p>我是list第5个</p>
+		<p>我是list第6个</p>
+		<p>我是list第7个</p>
+		<p>我是list第8个</p>
+		<p>我是list第9个</p>
+		<p>我是list第10个</p>
+		<p>我是list第11个</p>
+		<p>我是list第12个</p>
+		<p>我是list第13个</p>
+		<p>我是list第14个</p>
+		<p>我是list第15个</p>
+		<p>我是list第16个</p>
+		<p>我是list第17个</p>
+		<p>我是list第18个</p>
+		<p>我是list第19个</p>
+		<p>我是list第20个</p>
+		<p>我是list第21个</p>
+		<p>我是list第22个</p>
+		<p>我是list第23个</p>
+		<p>我是list第24个</p>
+		<p>我是list第25个</p>
+		<p>我是list第26个</p>
+		<p>我是list第27个</p>
+		<p>我是list第28个</p>
+		<p>我是list第29个</p>
+		<p>我是list第30个</p>
+		<p>我是list第31个</p>
+		<p>我是list第32个</p>
+		<p>我是list第33个</p>
+		<p>我是list第34个</p>
+		<p>我是list第35个</p>
+		<p>我是list第36个</p>
+		<p>我是list第37个</p>
+		<p>我是list第38个</p>
+		<p>我是list第39个</p>
+		<p>我是list第40个</p>
+		<p>我是list第41个</p>
+		<p>我是list第42个</p>
+		<p>我是list第43个</p>
+		<p>我是list第44个</p>
+		<p>我是list第45个</p>
+		<p>我是list第46个</p>
+		<p>我是list第47个</p>
+		<p>我是list第48个</p>
+		<p>我是list第49个</p>
+		<p>我是list第50个</p>
+	</div>
+</template>
+
+<script>
+	export default {
+		
+	}
+</script>
+
+<style>
+</style>
