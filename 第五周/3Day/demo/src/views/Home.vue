@@ -54,6 +54,7 @@
 			goList : function(){
 				this.$router.push({name : "list"})
 			}
+			
 		},
 		beforeRouteLeave(to,from,next){
 			if(localStorage.getItem("token")){
