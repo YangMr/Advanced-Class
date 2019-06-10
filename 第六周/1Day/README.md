@@ -59,3 +59,30 @@
 			自定义名称 :方法名｜属性名
 		})
 	}
+
+## mutations的使用
+
+	//作用:用户同步的去改变数据
+	mutations : {
+		"事件名" :　function(state,接收参数){
+			
+		}
+	}
+	
+	//调用方式一
+	this.$store.commit("事件名",传递的参数)
+	
+	//调用方式二
+	import {mapMutations} from "vue"
+	
+	methods : {
+		...mapMutations([
+			"事件名"
+		])
+	}
+	
+	methods : {
+		...mapMutations({
+			事件 : 事件名
+		})
+	}

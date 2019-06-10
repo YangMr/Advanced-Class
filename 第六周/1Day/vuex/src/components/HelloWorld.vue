@@ -5,12 +5,17 @@
 			<h1>{{gC}}</h1>
 			<hr>
 			<button @click="add">ADD DATA</button>
+			
+			<hr>
+			
+			<button @click="test">ACTIONS</button>
   </div>
 </template>
 
 <script>
 	import {mapGetters} from "vuex"
 	import {mapMutations} from "vuex"
+	import {mapActions} from "vuex"
 export default {
   name: 'HelloWorld',
   data () {
@@ -27,20 +32,30 @@ export default {
 		change : function(){
 			this.$router.push({name : "index"})
 		},
-		...mapMutations({
+		...mapActions({
+			test : {
+				type : "a",
+				num : 10
+			}
+		}),
+		// test : function(){
+			
+			/* this.$store.dispatch("a",{num : 5}) */
+		//},
+	/* 	...mapMutations({
 			add : {
 				type : "INCREMENT",
 				num : 10
 			}
-		})
-		//add : function(){
+		}) */
+		add : function(){
 			
 			/* this.$store.commit({
 				type : "INCREMENT",
 				num : 10
 			}) */
 			
-		//}
+		}
 	},
 	created(){
 		/* this.msg= this.$store.getters.getCounter; */
