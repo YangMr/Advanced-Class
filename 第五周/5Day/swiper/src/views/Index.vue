@@ -1,30 +1,32 @@
 <template>
 	<div class="container">
-		<div class="swiper-bg" :style="{background: slidesColor[index] }"></div>
+		<div class="swiper-bg" :style="{background:slidesColor[index]}"></div>
 		<div class="stage">
 			<div class="swiper">
-				<Swiper :slides="slidesImage" v-model="index"></Swiper>
+				<Swiper :slides="slidesImage" v-model="index" :interval="time"></Swiper>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
-	import config from "../config/config"
 	import Swiper from "../components/Swiper"
+	import config from "../config/config"
 	export default {
+		name : "Index",
 		data : function(){
 			return {
-				index : 0
+				index : 0,
+				time : 1
 			}
 		},
 		computed: {
-			slidesImage() {
+			slidesImage : function(){
 				return config.goods.map(function(item){
 					return item.poster;
-				}) 
+				})
 			},
-			slidesColor(){
+			slidesColor : function(){
 				return config.goods.map(function(item){
 					return item.color
 				})
@@ -36,24 +38,20 @@
 	}
 </script>
 
-<style>
-	*{
-		margin: 0;
-		padding: 0;
-	}
+<style scoped="scoped">
 	.container{
-		position:relative;
+		position: relative;
 		background-color: #f5f5f5;
-		border-bottom:1px solid transparent;
-		margin: 100px 0;
+		border-bottom: 1px solid transparent;
+		margin-top: 80px;
 	}
 	.container .swiper-bg{
-		height:500px;
 		width: 100%;
-		background-color: #e5e5e5;
+		height: 500px;
 		position: absolute;
 		left: 0;
 		top: 0;
+		background: #e5e5e5;;
 	}
 	.container .stage{
 		width: 1120px;
@@ -62,6 +60,6 @@
 	}
 	.container .swiper{
 		height: 500px;
-		background: #e8e8e8;
+		background: #e8e8e8;;
 	}
 </style>

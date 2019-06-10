@@ -4,6 +4,7 @@
 		<div class="swiper-paginator">
 			<span @mouseout="initTimer" @mouseover="toggleIndex(index)" :class="{'paginator-current': index===value}" class="pagination-item" v-for="(item,index) in slides"></span>
 		</div>
+		{{value}}
 	</div>
 </template>
 
