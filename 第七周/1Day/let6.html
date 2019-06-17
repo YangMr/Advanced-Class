@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<button>张三</button>
+		<button>李四</button>
+		<button>王五</button>
+	</body>
+</html>
+<script>
+	
+	var btns = document.getElementsByTagName("button");
+	
+	for(let i=0;i<btns.length;i++){
+		btns[i].onclick = function(){
+			console.log(i)
+		}
+	}
+	
+	for(var i=0;i<btns.length;i++){
+		btns[i].index = i; 
+		btns[i].onclick = function(){
+			alert(this.index)
+		}
+	}
+	
+</script>

@@ -1,0 +1,16 @@
+1.什么是es6?
+
+2.es6的历史?
+
+3.如何将es6转化为es5?
+
+	3.1 新建工程文件夹这里起名叫做es6,然后在里面创建两个文件夹分别为src 、dist如下图：(src为待转换es6 js存放目录，dist为编译完成后的es5 js存放目录)
+	3.2 在src目录下新建一个js文件（这里起名叫做index.js），里面输入es6的代码：
+	3.3 打开终端命令提示符 进入工程目录（这里也就是es6文件夹）输入如下命令初始化项目：（这里用的npm,国内用户建议用cnpm不懂得可以移步至淘宝镜像使用）命令执行完成后会在根目录生成package.json文件。
+	3.4 全局安装babel工具
+		3.4.1 在终端中输入以下命令, npm install -g babel-cli
+		3.4.2 虽然已经安装了babel-cli，只是这样还不能成功进行转换，我们还需要安装转换包才能成功转换。
+				npm install --save-dev babel-preset-es2015 babel-cli
+		3.4.3 安装完成后，我们可以看一下我们的package.json文件，已经多了devDependencies选项。
+	3.5 新建.babelrc
+		3.5.1 在项目根目录新建(.babelrc)文件输入如图所示代码：

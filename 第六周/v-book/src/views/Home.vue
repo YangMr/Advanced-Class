@@ -12,6 +12,7 @@
 		  </mt-tab-container-item>
 		  <mt-tab-container-item id="排行">
 			<mt-header fixed :title="selected"></mt-header>
+			<Ranking class="tab-container"></Ranking>
 		  </mt-tab-container-item>
 		   <mt-tab-container-item id="搜索">
 		  	搜索
@@ -19,7 +20,7 @@
 		</mt-tab-container>
 		
 		<!-- 底部tab -->
-		<mt-tabbar v-model="selected" :value="selected">
+		<mt-tabbar v-model="selected" :fixed="true" :value="selected">
 		  <mt-tab-item id="书架">
 			<img slot="icon" src="../assets/image/book.svg">
 			书架
@@ -43,6 +44,7 @@
 <script>
 	import Bookshelf from "./Bookshelf"
 	import Category from "./Category"
+	import Ranking from "./Ranking"
 	export default {
 		data : function(){
 			return {
@@ -56,7 +58,8 @@
 		},
 		components : {
 			Bookshelf,
-			Category
+			Category,
+			Ranking
 		}
 	}
 </script>
@@ -64,7 +67,7 @@
 <style scoped="scoped">
 	.tab-container{
 		width: 100vw;
-		height: 100vh;
+		min-height: 100vh;
 		padding:.4rem 0 .55rem 0;
 		box-sizing: border-box;
 		background: #fff;;
