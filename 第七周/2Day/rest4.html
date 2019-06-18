@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			li{list-style-type:none; float:left; margin: 5px; padding:10px; background: purple;}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</body>
+</html>
+<script>   
+	
+	function push(array,...items){
+		items.forEach(function(item){
+			array.push(item);
+		})
+		let lis = document.getElementsByTagName("li");
+		lis[0].innerHTML = array[0]
+	}
+	const a = [];
+	push(a,1,2,3);
+
+
+</script>

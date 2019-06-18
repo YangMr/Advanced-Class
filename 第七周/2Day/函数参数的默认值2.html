@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#box{width: 150px; height: 150px; background: red; position: absolute;}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+	</body>
+</html>
+<script>
+	
+	function Point(x=10,y=30){
+		this.x = x;
+		this.y = y;
+		
+		box.style.left = this.x + "px";
+		box.style.top = this.y + "px";
+	};
+	new Point()
+	/* const p = new Point();
+	console.log(p) */
+	var point = null;
+	document.onmousemove = function(e){
+		var e = e || window.event;
+		point = new Point(e.clientX,e.clientY);
+		console.log(point)
+	}
+	
+</script>

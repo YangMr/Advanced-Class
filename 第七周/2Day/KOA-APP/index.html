@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">获取数据</button>
+	</body>
+</html>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+	var btn = document.getElementById("btn");
+	btn.onclick = function(){
+		axios.get("https://github.com/login/oauth/authorize",{params : {client_id : "87a7b3db2856a8312014"}}).then((response)=>{
+			console.log(response)
+		}).catch(error=>{
+			console.log(error);
+		})
+	}
+</script>	
