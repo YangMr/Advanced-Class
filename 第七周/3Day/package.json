@@ -1,0 +1,17 @@
+{
+  "name": "3day",
+  "version": "1.0.0",
+  "description": "1. OAuth 2.0 的一个简单解释\r 2. OAuth 2.0 的四种方式\r 3. GitHub OAuth 第三方登录示例教程\r 4. async以及await\r 5. 微信登录,qq登录,微博登录--- 基于OAuth2.0的规范",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "koa": "^2.7.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0"
+  }
+}

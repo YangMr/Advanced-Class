@@ -1,4 +1,9 @@
-const Koa = require("koa");
+const path = require("path");
+console.log(path.join(__dirname + "/pulic"))
+
+
+
+/* const Koa = require("koa");
 const router = require("koa-router")();
 const app = new Koa();
 
@@ -46,6 +51,7 @@ app.use(async (ctx,next)=>{
 })
 */
 
-app.listen(3000,function(){
+/* app.listen(3000,function(){
 	console.log("server is running at http://localhost:3000")
-})
+}) */
+ 

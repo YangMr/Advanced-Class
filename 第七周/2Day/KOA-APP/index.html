@@ -5,17 +5,76 @@
 		<title></title>
 	</head>
 	<body>
-		<button id="btn">获取数据</button>
+		<!--1.  A 网站让用户跳转到 GitHub。 -->
+		<!--2. GitHub 要求用户登录，然后询问"A 网站要求获得 xx 权限，你是否同意？ -->
+		<!-- <button id="btn">获取数据</button> -->
+		<a id="login">使用Github登录</a>
 	</body>
 </html>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script>
-	var btn = document.getElementById("btn");
-	btn.onclick = function(){
-		axios.get("https://github.com/login/oauth/authorize",{params : {client_id : "87a7b3db2856a8312014"}}).then((response)=>{
-			console.log(response)
-		}).catch(error=>{
-			console.log(error);
-		})
-	}
+	//设置客户端id
+	const client_id = "f8a516b885193d67b95f";
+	//设置授权的地址
+	const authorize_uri = 'https://github.com/login/oauth/authorize';
+	//设置授权之后重定向的地址
+	const redirect_uri = "http://127.0.0.1:8848/KOA-APP/index.html/oauth/redirect";
+	
+	var oLogin = document.getElementById("login");
+	oLogin.href = `${authorize_uri}?client_id=${client_id}&redirect_uri=${redirect_uri}`;
 </script>	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- // var btn = document.getElementById("btn");
+	// btn.onclick = function(){
+	// 	axios.get("https://github.com/login/oauth/authorize",{params : {client_id : "87a7b3db2856a8312014"}}).then((response)=>{
+	// 		console.log(response)
+	// 	}).catch(error=>{
+	// 		console.log(error);
+	// 	})
+	// }
+ -->

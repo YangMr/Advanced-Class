@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>欢迎您: <span id="name"></span></h1>
+	</body>
+</html>
+<script>
+	const url = location.href;
+	
+	  function parseUrl(url) {
+        var url = url.split("?")[1];
+        var params = url.split("&");  //["name=jack", "age=100"]
+        var arr = [];
+        var res = {};
+        for(var i=0;i<params.length;i++){
+          arr = params[i].split("=");  //["name", "jack"]  ["age", "100"]
+          res[arr[0]] = arr[1];
+        }
+        return res;
+    }
+	
+	const oName = document.getElementById("name");
+	oName.innerHTML = decodeURIComponent(parseUrl(url).name)
+</script>

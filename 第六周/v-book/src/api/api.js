@@ -1,5 +1,5 @@
 ﻿import Vue from "vue"
-const baseUrl = "http://62.234.157.199:8888";
+const baseUrl = "http://62.234.158.203";
 export default {
 	//获取所有分类
 	getCategory : function(){

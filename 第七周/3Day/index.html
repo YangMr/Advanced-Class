@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<a id="login">使用Github登录</a>
+	</body>
+</html>
+<script>
+	
+	//设置客户端id
+	const client_id = "d386671dffecc12c6d4a";
+	//设置授权页面地址
+	const authorize_uri = 'https://github.com/login/oauth/authorize';
+	//设置重定向页面地址
+	const redirect_uri = "http://localhost:8080/index.html/oauth/redirect";
+	
+	//获取到超链接
+	var oLogin = document.getElementById("login");
+	
+	//设置href属性
+	oLogin.href=`${authorize_uri}?client_id=${client_id}&redirect=${redirect_uri}`;
+	
+</script>
