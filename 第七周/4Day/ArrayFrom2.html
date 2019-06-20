@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<p>100</p>
+		<p>100</p>
+		<p>100</p>
+		<p>100</p>
+		<p>100</p>
+		<p>100</p>
+		<p>10001</p>
+		<p>10001</p>
+		<p>10001</p>
+		<p>10001</p>
+		<p>10001</p>
+	</body>
+</html>
+<script>
+	
+	
+	var ps = document.querySelectorAll("p");
+	
+	var a = Array.from(ps,item=>{
+		// console.log(item.textContent)
+		return item.textContent > 100
+	})
+	
+	console.log(a)
+	
+	
+</script>

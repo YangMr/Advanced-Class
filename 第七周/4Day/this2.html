@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">0</button>
+		
+	</body>
+</html>
+<script>
+	var num = 0;
+	btn.onclick = function(){
+		setInterval(()=>{
+			this.innerHTML = num++;
+		},1000)
+	}
+	
+	
+</script>
