@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			
+			<div style="height:50px">
+				<input type="text" placeholder="请输入手机号" v-model="phoneNum">
+				<button @click="getFaceResult">确定</button>
+			</div>
+			
+			<div>
+				<span v-for="(item,index) in faceList" :key="index">{{item}}</span>
+			</div>
+		</div>
+	</body>
+</html>
+<script>
+	
+	new Vue({
+		el : "#app",
+		data : {
+			phoneNum : "",
+			faceList : ["20元","30元","50元"]
+		},
+		methods : {
+			//获取省和市
+			getLocation : function(phoneNum){
+				return axios.get("/phoneLocation",{phoneNum})
+			},
+			getFace : function(){
+				return axios.get("/face",{phoneNum})
+			},
+			async getFaceResult(){
+				
+				const result = await this.getLocation()
+				if(result){
+					const result2 = await this.getFace();
+				}
+				
+				/* this.getLocation(this.phoneNum).then(response=>{
+					this.getFace().then(response=>{
+					
+					})
+				}) */
+			}
+		},
+		computed : {
+			
+		},
+		watch : {
+			
+		},
+		filter : {
+			
+		}
+	})
+	
+</script>

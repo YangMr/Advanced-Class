@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+
+async function test(flag){
+	if(flag){
+		return "Hello Wolrd";
+	}else{
+		throw "我是错误的"
+	}
+};
+
+test(true).then(function(response){
+	console.log(response);
+});
+test(false).catch(function(error){
+	console.log(error)
+})
+
+
+	
+	
+</script>
