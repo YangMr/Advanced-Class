@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+   crossorigin="anonymous"></script>
+<script>
+	
+ 	const result = new Promise((resolve,reject)=>{
+		$.ajax({
+			url : "https://resources.ninghao.net/wxapp-case/db.json",
+			method : "get",
+			success : function(response){
+				resolve(response)
+			},
+			error : function(error){
+				reject(error)
+			}
+		})
+	});
+	
+	const result2 = new Promise((resolve,reject)=>{
+		$.ajax({
+			url : "https://resources.ninghao.net/wxapp-case/db.json",
+			method : "get",
+			success : function(response){
+				resolve(response)
+			},
+			error : function(error){
+				reject(error)
+			}
+		})
+	})
+	
+	// console.log(result)
+	//接收第一个ajax发送的请求
+	result.then((response)=>{
+		console.log(response)
+	}).catch(error=>{
+		console.log(error)
+	}); 
+	
+	//接收第二个ajax发送的请求
+	result2.then(response2=>{
+		console.log(response2)
+	}).catch(error2=>{
+		console.log(error2)
+	});
+	
+	
+	
+</script>
