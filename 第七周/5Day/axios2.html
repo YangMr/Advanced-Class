@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+</html>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+	function getData1(){
+		return axios.get("https://resources.ninghao.net/wxapp-case/db.json");
+	}
+	
+	function getData2(){
+		return axios.get("https://resources.ninghao.net/wxapp-case/db.json");
+	}
+	
+	
+	axios.all([getData1(),getData2()]).then(axios.spread(function(acct,perms){
+		console.log(perms)
+	}))
+	
+	/* 
+	axios.get("https://resources.ninghao.net/wxapp-case/db.json").then(response=>{
+		console.log(response)
+	}).catch(error=>{
+		console.log(error)
+	})
+	
+	
+	axios.get("https://resources.ninghao.net/wxapp-case/db.json").then(response=>{
+		console.log(response)
+	}).catch(error=>{
+		console.log(error)
+	}) */
+	
+</script>
